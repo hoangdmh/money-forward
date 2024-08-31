@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------
+// mainviual
+// -----------------------------------------------------------------
+.lp {
+  &-mainvisual {
+    background: url('./img/lp_bg_mainVisual.png') no-repeat top center/cover;
+
+    @include sp() {
+      background: url('./img/lp_bg_mainVisual_sp.png') no-repeat top center/cover;
+    }
+
+    &-content {
+      padding: 72px 0 80px;
+
+      @include sp() {
+        padding: vw(56) 0 vw(246);
+        text-align: center;
+      }
+    }
+
+    &-logo {
+      display: flex;
+      width: 278px;
+      margin-bottom: 24px;
+
+      @include sp() {
+        width: vw(243);
+        margin: 0 auto vw(24);
+      }
+    }
+
+    &-head {
+      color: $main_color;
+      font-size: 48px;
+      font-weight: bold;
+      line-height: 1.6;
+      letter-spacing: 0.04em;
+      margin-bottom: 24px;
+
+      @include sp() {
+        font-size: vw(28);
+        margin-bottom: vw(16);
+      }
+
+      span {
+        font-size: 32px;
+
+        @include sp() {
+          font-size: vw(20);
+        }
+      }
+    }
+
+    &-txt {
+      color: $base_color;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+
+      @include sp() {
+        font-size: vw(15);
+      }
+
+      a {
+        text-decoration: underline;
+        color: $main_color;
+        font-weight: bold;
+      }
+
+      strong {
+        font-size: 20px;
+        font-weight: bold;
+
+        @include sp() {
+          line-height: 1.6;
+          font-size: vw(18);
+        }
+      }
+
+      span {
+        background: rgb(255, 239, 194);
+        background: linear-gradient(360deg, rgba(255, 239, 194, 1) 0%, rgba(255, 239, 194, 1) 22%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 100%);
+      }
+
+      sup {
+        font-weight: bold;
+      }
+    }
+
+    &-link {
+      @include sp() {
+        margin-top: vw(4);
+        margin-bottom: vw(14);
+      }
+    }
+
+    &-note {
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+      margin-top: 18px;
+
+      @include sp() {
+        letter-spacing: 0;
+        line-height: 1.6;
+        font-size: vw(13);
+        margin-top: 0;
+      }
+    }
+  }
+}

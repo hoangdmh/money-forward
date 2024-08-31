@@ -1,0 +1,50 @@
+// -----------------------------------------------------------------
+// Title
+// -----------------------------------------------------------------
+.lp {
+  &-head {
+    text-align: center;
+    color: $base_color;
+
+    &-title {
+      font-size: 36px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      font-weight: bold;
+      padding-bottom: 36px;
+      margin-bottom: 32px;
+      position: relative;
+
+      @include sp() {
+        font-size: vw(32);
+      } 
+
+      &::after {
+        content: "";
+        width: 64px;
+        height: 4px;
+        background-color: $primary_color;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &-subtitle {
+      font-size: 24px;
+      line-height: 1.8;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+
+      @include sp() {
+        font-size: vw(20);
+      } 
+
+      span {
+        color: $main_color;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,81 @@
+// -----------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------
+.lp-footer {
+	background: #2E3449;
+	text-align: center;
+	color: #fff;
+	padding: 47px 0 19px;
+  font-weight: 400;
+	@include sp() {
+		padding: vw(30) vw(8) vw(100);
+	}
+  .lp-inner {
+    max-width: 1300px;
+    @include sp() {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+	&_menu {
+		display: flex;
+		justify-content: center;
+    margin: 0 0 22px;
+		li {
+			border-right: 1px solid #fff;
+			line-height: 1;
+			padding-right: 12px;
+			margin-right: 12px;
+			&:last-child {
+				border-right: 0;
+				padding: 0;
+				margin: 0;
+			}
+			a {
+				display: block;
+        color: #fff;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+		@include sp() {
+      flex-wrap: wrap;
+			font-size: vw(13);
+			margin: 0 0 vw(42);
+			li {
+				padding-right: vw(8);
+				margin-right: vw(8);
+        margin-bottom: vw(20);
+        &:last-child {
+          padding-left: vw(8);
+          margin-left: vw(8);
+        }
+        &:nth-child(3) {
+          width: 100%;
+          border: none;
+          a {
+            display: inline-block;
+            border-right: 1px solid #fff;
+            padding-right: vw(8);
+          }
+        }
+			}
+		}
+	}
+  &_text {
+    font-size: 14px;
+    @include sp() {
+      font-size: vw(14);
+    }
+  }
+	&_copy {
+		font-size: 12px;
+    font-weight: 500;
+    margin-top: 24px;
+		@include sp() {
+			font-size: vw(12);
+      margin-top: vw(30);
+		}
+	}
+}

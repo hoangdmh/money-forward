@@ -1,0 +1,79 @@
+// -----------------------------------------------------------------
+// Button
+// -----------------------------------------------------------------
+.lp {
+  &-c-btn {
+    background-color: $white_color;
+    color: $main_color;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    border-radius: 8px;
+    border: 2px solid $main_color;
+    text-align: center;
+    padding: 14px 10px;
+
+    @include sp() {
+      padding: vw(14) vw(10);
+      font-size: vw(18);
+    }
+
+    &-primary {
+      display: block;
+      background-color: $main_color;
+      color: $white_color;
+      font-size: 16px;
+      line-height: 1;
+      letter-spacing: 0.08em;
+      font-weight: bold;
+      border-radius: 100px;
+      padding: 12px 25.5px;
+      text-align: center;
+
+      @include pc() {
+        text-decoration: underline;
+      }
+
+      @include sp() {
+        padding: vw(10) vw(25.5);
+        font-size: vw(16);
+      }
+
+      &--small {
+        padding: 4px 16px;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+
+        @include sp() {
+          padding: vw(4) vw(16);
+          font-size: vw(16);
+        }
+      }
+    }
+  }
+
+  &-c-link {
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    font-weight: bold;
+    color: $base_color;
+    text-align: center;
+    padding-right: 30px;
+    position: relative;
+
+    &:after {
+      content: "";
+      width: 22px;
+      height: 22px;
+      background: url("./img/lp-icn-triangle.jpg") no-repeat center center/contain;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}
