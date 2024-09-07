@@ -111,14 +111,14 @@
         color: $base_color;
         font-weight: 400;
         padding: 12px 16px;
+      }
 
-        &.lp-table-cell {
-          font-size: 20px;
-          line-height: 1.4;
-          letter-spacing: 0.04em;
-          font-weight: bold;
-          color: $main_color;
-        }
+      .lp-table-cell {
+        font-size: 20px;
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+        color: $main_color;
       }
     }
 
@@ -191,6 +191,30 @@
             }
           }
         }
+
+        td {
+          strong {
+            font-size: 18px;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            font-weight: bold;
+          }
+
+          small {
+            display: block;
+            font-size: 14px;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            font-weight: 400;
+          }
+
+          span {
+            font-size: 16px;
+            line-height: 1.8;
+            letter-spacing: 0.04em;
+            font-weight: 400;
+          }
+        }
       }
 
       .lp-br-none {
@@ -199,6 +223,70 @@
 
       .lp-bg-cell {
         background-color: $table_row_color;
+        color: $main_color;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        vertical-align: middle;
+      }
+
+      .lp-table-cell {
+        padding-right: 24px;
+        padding-left: 24px;
+      }
+
+      .lp-business {
+        line-height: 1.4;
+        letter-spacing: 0.04em;
+        font-weight: bold;
+        text-align: center;
+
+        &-title {
+          background-color: $main_color;
+          color: $white_color;
+          border-radius: 4px;
+          padding: 6px;
+          font-size: 20px;
+          margin-bottom: 32px;
+        }
+
+        &-content {
+          padding: 24px 16px 8px;
+          border: 1px solid $main_color;
+          border-radius: 4px;
+          position: relative;
+        }
+
+        &-label {
+          width: 84px;
+          font-size: 16px;
+          letter-spacing: 0.08em;
+          background-color: $table_tbody_color;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -12px);
+        }
+
+        &-plan {
+          background-color: $table_thead_color;
+          padding: 4px;
+          border-radius: 4px;
+          color: $white_color;
+          font-size: 16px;
+          margin-bottom: 8px;
+        }
+
+        &-money {
+          font-size: 18px;
+          margin-bottom: 16px;
+
+          span {
+            font-weight: bold;
+            font-size: 14px;
+          }
+        }
       }
     }
   }

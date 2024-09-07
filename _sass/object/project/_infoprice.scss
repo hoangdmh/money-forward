@@ -3,6 +3,11 @@
 // -----------------------------------------------------------------
 .lp {
   &-sec-infoprice {
+    margin-bottom: 120px;
+
+    @include sp() {
+      margin-bottom: vw(80);
+    }
 
     .lp-infoprice-content {
       .lp-c-btn {
@@ -34,6 +39,10 @@
 
       &:not(:last-child) {
         margin-bottom: 80px;
+
+        @include sp() {
+          margin-bottom: vw(56);
+        }
       }
     }
   }
@@ -124,7 +133,7 @@
           &:last-child {
             border-top-right-radius: 4px;
           }
-  
+
           &:nth-last-child(2) {
             border-top-left-radius: 4px;
           }
@@ -154,6 +163,7 @@
               &:first-child {
                 border-bottom-left-radius: 4px;
               }
+
               &:last-child {
                 border-bottom-right-radius: 4px;
               }
@@ -188,6 +198,149 @@
           font-size: 14px;
           font-weight: 400;
         }
+      }
+    }
+  }
+
+  &-mailbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px 0;
+
+    @include sp() {
+      gap: vw(16) 0;
+    }
+
+    &-item {
+      width: 560px;
+      display: flex;
+      justify-content: space-between;
+      padding: 32px 40px 32px 24px;
+      border-radius: 8px;
+      border: 1px solid $border_color;
+
+      @include sp() {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: vw(24) vw(24) vw(32) vw(24);
+      }
+    }
+
+    &-media {
+      width: 144px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      @include sp() {
+        width: vw(258);
+        column-gap: vw(8);
+        flex-direction: row;
+        align-items: center;
+        margin: 0 auto vw(16);
+
+        &>figure {
+          width: vw(104);
+        }
+
+        .lp_mailbox_logo {
+          width: vw(146);
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &-detail {
+      width: 312px;
+      color: $base_color;
+      letter-spacing: 0;
+
+      @include sp() {
+        width: 100%;
+      }
+
+      .lp-mailbox-inner {
+        &:not(:first-child) {
+          margin-top: 16px;
+
+          @include sp() {
+            margin-top: vw(16);
+          }
+        }
+      }
+
+      &-list {
+        margin-top: 8px;
+        padding-left: 17px;
+        margin-left: 5px;
+
+        @include sp() {
+          margin-top: vw(8);
+          padding-left: vw(17);
+          margin-left: vw(5);
+        }
+      }
+
+      &-item {
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: 400;
+        list-style-type: disc;
+
+        @include sp() {
+          font-size: vw(14);
+        }
+      }
+
+      &-btn {
+        margin-top: 16px;
+
+        @include sp() {
+          margin-top: vw(16);
+        }
+      }
+    }
+
+    &-label {
+      background-color: $table_row_color;
+      padding: 16px 24px;
+      text-align: center;
+      margin-bottom: 16px;
+      color: $main_color;
+      letter-spacing: 0.04em;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: bold;
+
+      @include sp() {
+        padding: vw(12) vw(16);
+        margin-bottom: vw(12);
+        font-size: vw(18);
+      }
+    }
+
+    &-strong {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: bold;
+
+      @include sp() {
+        font-size: vw(15);
+      }
+    }
+
+    &-txt {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 400;
+
+      @include sp() {
+        font-size: vw(15);
       }
     }
   }
