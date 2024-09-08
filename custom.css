@@ -920,6 +920,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #0054AC;
 }
 @media screen and (max-width: 768px) {
+  .lp-table tr .lp-table-cell {
+    font-size: 3.8461538462vw;
+    padding: 4.358974359vw 2.0512820513vw;
+  }
+}
+@media screen and (max-width: 768px) {
   .lp-table-scroll {
     width: 100%;
     overflow-x: scroll;
@@ -928,6 +934,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-table-user {
     width: 174.358974359vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-table-user thead tr th {
+    padding-right: 20px;
   }
 }
 .lp-table-user thead .col-1 {
@@ -965,8 +976,17 @@ h1, h2, h3, h4, h5, h6 {
 .lp-table-user tr:nth-of-type(even) {
   background-color: #F2F5FF;
 }
-.lp-table-user tr td:nth-last-child(-n+2) {
-  text-align: center;
+@media screen and (max-width: 768px) {
+  .lp-table-user tr td {
+    padding: 1.5384615385vw 3.0769230769vw;
+    line-height: 1.6;
+    font-size: 3.5897435897vw;
+    letter-spacing: 0.04em;
+  }
+  .lp-table-user tr td:nth-last-child(-n+2) {
+    padding-right: 8.9743589744vw;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-table-pay {
@@ -1023,18 +1043,43 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.04em;
   line-height: 1.8;
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay tr td {
+    line-height: 1.6;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-table-pay tr td:nth-last-child(-n+2) {
+    padding: 1.5384615385vw 3.0769230769vw;
+  }
+}
 .lp-table-pay tr td strong {
   font-size: 18px;
   font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .lp-table-pay tr td strong {
+    font-size: 3.8461538462vw;
+  }
 }
 .lp-table-pay tr td small {
   display: block;
   font-size: 14px;
   font-weight: 400;
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay tr td small {
+    font-size: 3.3333333333vw;
+  }
+}
 .lp-table-pay tr td span {
   font-size: 16px;
   font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .lp-table-pay tr td span {
+    font-size: 3.5897435897vw;
+  }
 }
 .lp-table-pay .lp-br-none {
   border-right: none;
@@ -1048,9 +1093,17 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.04em;
   vertical-align: middle;
 }
-.lp-table-pay .lp-table-cell {
-  padding-right: 24px;
-  padding-left: 24px;
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-bg-cell {
+    font-size: 3.8461538462vw;
+    padding: 1.5384615385vw 3.0769230769vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-table-pay .lp-table-cell {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
 }
 .lp-table-pay .lp-business {
   line-height: 1.4;
@@ -1066,11 +1119,23 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   margin-bottom: 32px;
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-title {
+    font-size: 4.6153846154vw;
+    padding: 1.2820512821vw 1.2820512821vw;
+    margin-bottom: 6.1538461538vw;
+  }
+}
 .lp-table-pay .lp-business-content {
   padding: 24px 16px 8px;
   border: 1px solid #0054AC;
   border-radius: 4px;
   position: relative;
+}
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-content {
+    padding: 5.1282051282vw 2.0512820513vw 2.0512820513vw;
+  }
 }
 .lp-table-pay .lp-business-label {
   width: 84px;
@@ -1082,6 +1147,13 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translate(-50%, -12px);
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-label {
+    width: 17.4358974359vw;
+    font-size: 3.8461538462vw;
+    transform: translate(-50%, -vw(12));
+  }
+}
 .lp-table-pay .lp-business-plan {
   background-color: #6190E1;
   padding: 4px;
@@ -1090,13 +1162,31 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 16px;
   margin-bottom: 8px;
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-plan {
+    font-size: 3.5897435897vw;
+    padding: 1.0256410256vw 0;
+    margin-bottom: 2.0512820513vw;
+  }
+}
 .lp-table-pay .lp-business-money {
   font-size: 18px;
   margin-bottom: 16px;
 }
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-money {
+    font-size: 3.8461538462vw;
+    margin-bottom: 3.0769230769vw;
+  }
+}
 .lp-table-pay .lp-business-money span {
   font-weight: bold;
   font-size: 14px;
+}
+@media screen and (max-width: 768px) {
+  .lp-table-pay .lp-business-money span {
+    font-size: 3.3333333333vw;
+  }
 }
 
 .lp-mainvisual {
@@ -1323,6 +1413,11 @@ h1, h2, h3, h4, h5, h6 {
 .lp-sec-infoprice .lp-infoprice-content .lp-c-btn {
   margin-bottom: 48px;
 }
+@media screen and (max-width: 768px) {
+  .lp-sec-infoprice .lp-infoprice-content .lp-c-btn {
+    margin-bottom: 8.2051282051vw;
+  }
+}
 .lp-sec-infoprice .lp-infoprice-content .lp-description {
   text-align: center;
   margin-bottom: 48px;
@@ -1330,6 +1425,13 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
   letter-spacing: 0.04em;
   font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .lp-sec-infoprice .lp-infoprice-content .lp-description {
+    font-size: 3.8461538462vw;
+    text-align: left;
+    margin-bottom: 8.2051282051vw;
+  }
 }
 .lp-sec-infoprice .lp-infoprice-content .lp-caption {
   font-size: 14px;
@@ -1339,9 +1441,23 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-top: 24px;
 }
+@media screen and (max-width: 768px) {
+  .lp-sec-infoprice .lp-infoprice-content .lp-caption {
+    font-size: 3.5897435897vw;
+    margin-bottom: 6.1538461538vw;
+    text-align: left;
+    text-indent: -15px;
+    padding-left: 15px;
+  }
+}
 .lp-sec-infoprice .lp-infoprice-content .lp-table-link {
   text-align: center;
   margin-top: 40px;
+}
+@media screen and (max-width: 768px) {
+  .lp-sec-infoprice .lp-infoprice-content .lp-table-link {
+    margin-top: 8.2051282051vw;
+  }
 }
 .lp-sec-infoprice .lp-infoprice-content:not(:last-child) {
   margin-bottom: 80px;

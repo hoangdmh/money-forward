@@ -12,6 +12,10 @@
     .lp-infoprice-content {
       .lp-c-btn {
         margin-bottom: 48px;
+
+        @include sp() {
+          margin-bottom: vw(32);
+        }
       }
 
       .lp-description {
@@ -21,6 +25,12 @@
         line-height: 1.8;
         letter-spacing: 0.04em;
         font-weight: 400;
+
+        @include sp() {
+          font-size: vw(15);
+          text-align: left;
+          margin-bottom: vw(32);
+        }
       }
 
       .lp-caption {
@@ -30,11 +40,23 @@
         font-weight: 400;
         text-align: center;
         margin-top: 24px;
+
+        @include sp() {
+          font-size: vw(14);
+          margin-bottom: vw(24);
+          text-align: left;
+          text-indent: -15px;
+          padding-left: 15px;
+        }
       }
 
       .lp-table-link {
         text-align: center;
         margin-top: 40px;
+
+        @include sp() {
+          margin-top: vw(32);
+        }
       }
 
       &:not(:last-child) {
@@ -53,14 +75,14 @@
     justify-content: space-between;
     padding-top: 64px;
 
-    @include sp(){
+    @include sp() {
       padding-top: vw(40);
     }
 
     &-left {
       width: 600px;
 
-      @include sp(){
+      @include sp() {
         width: 100%;
       }
 
@@ -85,7 +107,7 @@
       border: 3px dashed $primary_color;
       border-radius: 24px;
 
-      @include sp(){
+      @include sp() {
         width: 100%;
         padding: vw(12);
         border-radius: vw(24);
@@ -96,7 +118,7 @@
       width: 24px;
       margin: 16px auto;
 
-      @include sp(){
+      @include sp() {
         width: vw(24);
         margin: vw(12) auto;
       }
@@ -117,7 +139,7 @@
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
 
-      @include sp(){
+      @include sp() {
         height: vw(64);
         padding: 0 vw(24);
         border-top-left-radius: vw(16);
@@ -129,7 +151,7 @@
         width: 95px;
         margin-right: 16px;
 
-        @include sp(){
+        @include sp() {
           width: vw(93);
           margin-right: vw(16);
         }
@@ -141,7 +163,7 @@
         letter-spacing: 0.04em;
         font-weight: bold;
 
-        @include sp(){
+        @include sp() {
           font-size: vw(20);
         }
       }
@@ -157,7 +179,7 @@
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
 
-      @include sp(){
+      @include sp() {
         padding: vw(24) vw(12);
         border-bottom-left-radius: vw(16);
         border-bottom-right-radius: vw(16);
@@ -171,7 +193,7 @@
       letter-spacing: 0.04em;
       font-weight: 400;
 
-      @include sp(){
+      @include sp() {
         font-size: vw(15);
       }
     }
@@ -192,9 +214,7 @@
       tr {
         min-height: 93px;
 
-        @include sp(){
-        
-        }
+        @include sp() {}
 
         td {
           text-align: center;
@@ -203,8 +223,8 @@
             padding: 12px 12px;
             font-weight: bold;
 
-            @include sp(){
-              @include sp(){
+            @include sp() {
+              @include sp() {
                 padding: 0 vw(8);
               }
             }
@@ -216,7 +236,7 @@
             letter-spacing: 0.04em;
             line-height: 1.8;
 
-            @include sp(){
+            @include sp() {
               font-size: vw(14);
             }
           }
@@ -252,7 +272,7 @@
           letter-spacing: 0.04em;
           font-weight: bold;
 
-          @include sp(){
+          @include sp() {
             font-size: vw(24);
           }
         }
@@ -260,7 +280,7 @@
         .lp-yen {
           font-size: 20px;
 
-          @include sp(){
+          @include sp() {
             font-size: vw(16);
           }
         }
@@ -269,7 +289,7 @@
           font-size: 14px;
           font-weight: 400;
 
-          @include sp(){
+          @include sp() {
             font-size: vw(14);
           }
         }
@@ -277,8 +297,8 @@
 
       .lp-bt-left-radius {
         border-top-left-radius: 4px !important;
-  
-        @include sp(){
+
+        @include sp() {
           border-top-left-radius: vw(4) !important;
         }
       }
