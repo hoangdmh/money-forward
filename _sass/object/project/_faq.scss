@@ -27,12 +27,12 @@
         padding-bottom: 40px;
         margin-bottom: 40px;
         border-bottom: 1px solid #D6D8E0;
-      }
 
-      @include sp() {
-        padding-bottom: vw(40);
-        margin-bottom: vw(40);
-      }
+        @include sp() {
+          padding-bottom: vw(40);
+          margin-bottom: vw(40);
+        }
+      }  
 
       a {
         font-weight: bold;

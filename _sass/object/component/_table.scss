@@ -4,16 +4,25 @@
     border-spacing: 0;
     border-collapse: separate;
     --border: 1px solid #91AFF2;
+    --radius: 16px;
 
     thead {
       th {
         &:last-child {
           border-right: var(--border);
-          border-top-right-radius: 16px;
+          border-top-right-radius: var(--radius);
+
+          @include sp() {
+            border-top-right-radius: vw(16);
+          }
         }
 
         &:nth-last-child(2) {
-          border-top-left-radius: 16px;
+          border-top-left-radius: var(--radius);
+
+          @include sp() {
+            border-top-left-radius: vw(16);
+          }
         }
 
         &:nth-last-child(-n+2) {
@@ -41,11 +50,19 @@
       &:last-child {
         td {
           &:first-child {
-            border-bottom-left-radius: 16px;
+            border-bottom-left-radius: var(--radius);
+
+            @include sp() {
+              border-bottom-left-radius: vw(16);
+            }
           }
 
           &:last-child {
-            border-bottom-right-radius: 16px;
+            border-bottom-right-radius: var(--radius);
+
+            @include sp() {
+              border-bottom-right-radius: vw(16);
+            }
           }
         }
       }
@@ -60,7 +77,11 @@
     }
 
     .lp-bt-left-radius {
-      border-top-left-radius: 4px !important;
+      border-top-left-radius: 16px !important;
+
+      @include sp() {
+        border-top-left-radius: vw(16) !important;
+      }
     }
 
     .lp-bt-right-radius {
@@ -78,12 +99,21 @@
       letter-spacing: 0.04em;
       font-weight: bold;
 
+      @include sp() {
+        width: vw(139);
+        font-size: vw(15);
+        padding: vw(7.5) 0;
+      }
+
       span {
         display: block;
         font-size: 14px;
         line-height: 1.6;
-        letter-spacing: 0.04em;
         font-weight: 400;
+
+        @include sp() {
+          font-size: vw(13);
+        }
       }
     }
 
@@ -111,6 +141,12 @@
         color: $base_color;
         font-weight: 400;
         padding: 12px 16px;
+
+        @include sp() {
+          font-size: vw(15);
+          line-height: 1.4;
+          padding: vw(8) vw(14.5) vw(16);
+        }
       }
 
       .lp-table-cell {
@@ -122,22 +158,49 @@
       }
     }
 
+    &-scroll {
+      @include sp() {
+        width: 100%;
+        overflow-x: scroll;
+      }
+    }
+
     &-user {
+      @include sp() {
+        width: vw(680);
+      }
+
       thead {
         .col-1 {
           width: 216px;
+
+          @include sp() {
+            width: vw(80);
+          }
         }
 
         .col-2 {
           width: 464px;
+
+          @include sp() {
+            width: vw(200);
+          }
         }
 
         .col-3 {
           width: 240px;
+
+          @include sp() {
+            width: vw(200);
+          }
         }
 
         .col-4 {
           width: 240px;
+
+          @include sp() {
+            width: vw(200);
+          }
         }
       }
 
@@ -155,21 +218,41 @@
     }
 
     &-pay {
+      @include sp() {
+        width: vw(656);
+      }
+
       thead {
         .col-1 {
           width: 200px;
+
+          @include sp() {
+            width: vw(112);
+          }
         }
 
         .col-2 {
           width: 320px;
+
+          @include sp() {
+            width: vw(160);
+          }
         }
 
         .col-3 {
           width: 240px;
+
+          @include sp() {
+            width: vw(144);
+          }
         }
 
         .col-4 {
           width: 400px;
+
+          @include sp() {
+            width: vw(240);
+          }
         }
       }
 
@@ -177,9 +260,14 @@
         &:first-child {
           td {
             &:first-child {
-              border-top-left-radius: 16px;
-              border-bottom-left-radius: 16px;
+              border-top-left-radius: var(--radius);
+              border-bottom-left-radius: var(--radius);
               border-bottom: var(--border);
+
+              @include sp() {
+                border-top-left-radius: vw(16);
+                border-bottom-left-radius: vw(16);
+              }
             }
           }
         }
@@ -193,25 +281,22 @@
         }
 
         td {
+          letter-spacing: 0.04em;
+          line-height: 1.8;
+
           strong {
             font-size: 18px;
-            line-height: 1.8;
-            letter-spacing: 0.04em;
             font-weight: bold;
           }
 
           small {
             display: block;
             font-size: 14px;
-            line-height: 1.8;
-            letter-spacing: 0.04em;
             font-weight: 400;
           }
 
           span {
             font-size: 16px;
-            line-height: 1.8;
-            letter-spacing: 0.04em;
             font-weight: 400;
           }
         }

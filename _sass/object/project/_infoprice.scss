@@ -53,8 +53,16 @@
     justify-content: space-between;
     padding-top: 64px;
 
+    @include sp(){
+      padding-top: vw(40);
+    }
+
     &-left {
       width: 600px;
+
+      @include sp(){
+        width: 100%;
+      }
 
       .lp-step-content {
         height: 100%;
@@ -65,6 +73,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include sp() {
+        width: 100%;
+      }
     }
 
     &-right {
@@ -72,11 +84,22 @@
       padding: 21px 21px 21px;
       border: 3px dashed $primary_color;
       border-radius: 24px;
+
+      @include sp(){
+        width: 100%;
+        padding: vw(12);
+        border-radius: vw(24);
+      }
     }
 
     &-plus {
       width: 24px;
       margin: 16px auto;
+
+      @include sp(){
+        width: vw(24);
+        margin: vw(12) auto;
+      }
     }
 
     &-content {
@@ -94,10 +117,22 @@
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
 
+      @include sp(){
+        height: vw(64);
+        padding: 0 vw(24);
+        border-top-left-radius: vw(16);
+        border-top-right-radius: vw(16);
+      }
+
       img {
         display: block;
         width: 95px;
         margin-right: 16px;
+
+        @include sp(){
+          width: vw(93);
+          margin-right: vw(16);
+        }
       }
 
       p {
@@ -105,6 +140,10 @@
         line-height: 1;
         letter-spacing: 0.04em;
         font-weight: bold;
+
+        @include sp(){
+          font-size: vw(20);
+        }
       }
     }
 
@@ -117,6 +156,12 @@
       padding: 32px 40px 40px 40px;
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
+
+      @include sp(){
+        padding: vw(24) vw(12);
+        border-bottom-left-radius: vw(16);
+        border-bottom-right-radius: vw(16);
+      }
     }
 
     &-txt {
@@ -125,6 +170,10 @@
       line-height: 1.8;
       letter-spacing: 0.04em;
       font-weight: 400;
+
+      @include sp(){
+        font-size: vw(15);
+      }
     }
 
     .lp-table {
@@ -143,12 +192,22 @@
       tr {
         min-height: 93px;
 
+        @include sp(){
+        
+        }
+
         td {
           text-align: center;
 
           &:first-child {
             padding: 12px 12px;
             font-weight: bold;
+
+            @include sp(){
+              @include sp(){
+                padding: 0 vw(8);
+              }
+            }
           }
 
           &>span {
@@ -156,6 +215,10 @@
             font-weight: 400;
             letter-spacing: 0.04em;
             line-height: 1.8;
+
+            @include sp(){
+              font-size: vw(14);
+            }
           }
 
           &:last-child {
@@ -188,15 +251,35 @@
           line-height: 1.8;
           letter-spacing: 0.04em;
           font-weight: bold;
+
+          @include sp(){
+            font-size: vw(24);
+          }
         }
 
         .lp-yen {
           font-size: 20px;
+
+          @include sp(){
+            font-size: vw(16);
+          }
         }
 
         .lp-month {
           font-size: 14px;
           font-weight: 400;
+
+          @include sp(){
+            font-size: vw(14);
+          }
+        }
+      }
+
+      .lp-bt-left-radius {
+        border-top-left-radius: 4px !important;
+  
+        @include sp(){
+          border-top-left-radius: vw(4) !important;
         }
       }
     }
