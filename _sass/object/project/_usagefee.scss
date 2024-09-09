@@ -17,6 +17,12 @@
       font-size: vw(15);
     }
 
+    .lp-head-title {
+      @include pc() {
+        margin-bottom: 56px;
+      }
+    }
+
     &-case {
       display: flex;
       flex-wrap: wrap;

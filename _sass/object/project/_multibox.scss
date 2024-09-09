@@ -4,14 +4,13 @@
 
 .lp {
   &-sec-multibox {
-    padding-top: 63px;
-    margin-bottom: 104px;
+    padding-top: 64px;
+    margin-bottom: 160px;
 
-    @include sp(){
+    @include sp() {
       padding-top: vw(40);
-      margin-bottom: vw(48);
+      margin-bottom: vw(80);
     }
-
   }
 
   &-card {
@@ -19,8 +18,9 @@
     flex-wrap: wrap;
     gap: 24px;
     margin-bottom: 56px;
+    letter-spacing: 0.04em;
 
-    @include sp(){
+    @include sp() {
       justify-content: space-between;
       gap: vw(16) 0;
       margin-bottom: vw(32);
@@ -29,7 +29,7 @@
     &-head {
       margin-bottom: 32px;
 
-      @include sp(){
+      @include sp() {
         margin-bottom: vw(24);
       }
     }
@@ -39,7 +39,7 @@
       display: flex;
       flex-direction: column;
 
-      @include sp(){
+      @include sp() {
         width: calc(50% - vw(6));
       }
     }
@@ -47,12 +47,11 @@
     &-item {
       display: flex;
       flex-direction: column;
-      
-      padding: 23px 23px 22px 23px;
+      padding: 22px 24px;
       border: 1px solid $border_color;
       border-radius: 8px;
 
-      @include sp(){
+      @include sp() {
         padding: vw(16) vw(16) vw(24);
       }
     }
@@ -61,10 +60,18 @@
       .lp-card-item {
         height: 100%;
       }
+
+      &-img {
+        @include pc() {
+          margin-bottom: 8px;
+        }
+      }
     }
 
     &-img {
-      margin-bottom: 8px;
+      @include pc() {
+        margin-bottom: 8px;
+      }
     }
 
     &-body {
@@ -77,16 +84,20 @@
     &-txt {
       font-size: 14px;
       line-height: 1.8;
-      letter-spacing: 0.04em;
-      letter-spacing: 0;
+      letter-spacing: -0.01em;
       color: $base_color;
       margin-bottom: 24px;
       font-weight: 400;
 
-      @include sp(){
+      @include sp() {
         font-size: vw(13);
         margin-bottom: vw(16);
-        letter-spacing: 0;
+      }
+    }
+
+    &-letter-spacing {
+      @include pc() {
+        letter-spacing: -0.05em;
       }
     }
 
@@ -96,7 +107,7 @@
       gap: 10px;
       justify-content: space-between;
 
-      @include sp(){
+      @include sp() {
         gap: vw(16) 0;
         flex-wrap: wrap;
         justify-content: center;
@@ -111,9 +122,27 @@
       color: $main_color;
       text-decoration: underline;
 
-      @include sp(){
+      @include sp() {
         font-size: vw(15);
       }
+    }
+  }
+}
+
+.accounting {
+  .lp-card-item {
+    @include pc() {
+      padding: 23px 24px;
+    }
+  }
+}
+
+.lp-card-second {
+  @include pc() {
+    gap: 32px;
+
+    li {
+      width: 268px;
     }
   }
 }

@@ -90,7 +90,7 @@
 
     &-thead {
       width: 220px;
-      padding: 7px 8px;
+      padding: 7.5px 8px;
       color: $white_color;
       background-color: $table_thead_color;
       text-align: center;
@@ -98,6 +98,7 @@
       line-height: 1.6;
       letter-spacing: 0.04em;
       font-weight: bold;
+      vertical-align: middle;
 
       @include sp() {
         width: vw(139);
@@ -140,7 +141,7 @@
         letter-spacing: 0.04em;
         color: $base_color;
         font-weight: 400;
-        padding: 12px 16px;
+        padding: 8px 16px 16px;
 
         @include sp() {
           font-size: vw(15);
@@ -178,6 +179,10 @@
       thead {
         tr {
           th {
+            @include pc() {
+              padding: 7px 8px;
+            }
+
             @include sp() {
               padding-right: 20px;
             }
@@ -223,6 +228,16 @@
         }
 
         td {
+          vertical-align: middle;
+
+          @include pc() {
+            padding: 11.25px 16px 11.25px;
+
+            &:nth-last-child(-n+2) {
+              text-align: center;
+            }
+          }
+
           @include sp() {
             padding: vw(6) vw(12);
             line-height: 1.6;
@@ -304,6 +319,10 @@
         td {
           letter-spacing: 0.04em;
           line-height: 1.8;
+
+          @include pc() {
+            padding: 12px 16px 12px;
+          }
 
           @include sp() {
             line-height: 1.6;

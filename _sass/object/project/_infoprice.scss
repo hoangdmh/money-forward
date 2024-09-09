@@ -60,7 +60,7 @@
       }
 
       &:not(:last-child) {
-        margin-bottom: 80px;
+        margin-bottom: 78px;
 
         @include sp() {
           margin-bottom: vw(56);
@@ -220,8 +220,7 @@
           text-align: center;
 
           &:first-child {
-            padding: 12px 12px;
-            font-weight: bold;
+            padding: 0 12px;
 
             @include sp() {
               @include sp() {
@@ -256,24 +255,46 @@
 
         &:first-child {
           td {
-            p {
-              color: $main_color;
-            }
+            color: $main_color;
 
             &:first-child {
-              color: $main_color;
+              font-weight: bold;
+            }
+
+            p {
+              font-size: 28px;
+
+              @include sp() {
+                font-size: vw(24);
+              } 
+            }
+            .lp-yen {
+              font-size: 20px;
+    
+              @include sp() {
+                font-size: vw(16);
+              }
+            }
+    
+            .lp-month {
+              font-size: 14px;
+              font-weight: 400;
+    
+              @include sp() {
+                font-size: vw(14);
+              }
             }
           }
         }
 
         p {
-          font-size: 28px;
-          line-height: 1.8;
+          font-size: 24px;
+          line-height: 1.5;
           letter-spacing: 0.04em;
           font-weight: bold;
 
           @include sp() {
-            font-size: vw(24);
+            font-size: vw(20);
           }
         }
 
@@ -305,11 +326,127 @@
     }
   }
 
+  &-plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    color: $base_color;
+    padding: 40px 0;
+    border-radius: 16px;
+    border: 1px solid $border_color;
+    margin-bottom: 32px;
+
+    @include sp() {
+      padding: vw(32) vw(24);
+      margin-bottom: vw(24);
+    }
+
+    &-item {
+      display: flex;
+      width: 500px;
+      column-gap: 32px;
+
+      @include sp() {
+        width: 100%;
+        column-gap: vw(8);
+      }
+
+      &:first-child {
+        @include pc() {
+          justify-content: flex-end;
+          border-right: 1px solid #D6D8E0;
+          padding-right: 88.5px;
+        }
+
+        @include sp() {
+          padding-bottom: vw(32);
+          margin-bottom: vw(32);
+          border-bottom: 1px solid #D6D8E0;
+          ;
+        }
+      }
+
+      &:last-child {
+        @include pc() {
+          justify-content: flex-start;
+          padding-left: 88.5px;
+        }
+      }
+    }
+
+    .lp-plan-des {
+      @include sp() {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    figure {
+      width: 144px;
+
+      @include sp() {
+        width: vw(96);
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: bold;
+
+      @include sp() {
+        font-size: vw(18);
+        text-align: center;
+      }
+
+      span {
+        font-size: 32px;
+        color: $main_color;
+
+        @include sp() {
+          font-size: vw(28);
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+
+        @include sp() {
+          font-size: vw(15);
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      margin-top: 16px;
+
+      @include sp() {
+        margin-top: vw(12);
+      }
+    }
+
+    .lp-c-btn-primary--little {
+      min-width: 155px;
+      height: 37px;
+
+      @include sp() {
+        height: vw(34);
+        min-width: vw(142);
+      }
+    }
+  }
+
   &-mailbox {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap: 40px 0;
+    gap: 32px 0;
 
     @include sp() {
       gap: vw(16) 0;
@@ -319,7 +456,7 @@
       width: 560px;
       display: flex;
       justify-content: space-between;
-      padding: 32px 40px 32px 24px;
+      padding: 31px 40px 31px 24px;
       border-radius: 8px;
       border: 1px solid $border_color;
 
@@ -369,7 +506,7 @@
 
       .lp-mailbox-inner {
         &:not(:first-child) {
-          margin-top: 16px;
+          margin-top: 12px;
 
           @include sp() {
             margin-top: vw(16);
@@ -378,14 +515,10 @@
       }
 
       &-list {
-        margin-top: 8px;
-        padding-left: 17px;
-        margin-left: 5px;
+        margin-top: 7px;
 
         @include sp() {
           margin-top: vw(8);
-          padding-left: vw(17);
-          margin-left: vw(5);
         }
       }
 
@@ -393,7 +526,15 @@
         font-size: 14px;
         line-height: 1.8;
         font-weight: 400;
-        list-style-type: disc;
+        padding-left: 22px;
+        position: relative;
+
+        &::after {
+          content: "•";
+          position: absolute;
+          top: 0;
+          left: 9px
+        }
 
         @include sp() {
           font-size: vw(14);

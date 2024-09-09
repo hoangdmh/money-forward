@@ -41,15 +41,22 @@
       }
 
       &--little {
-        padding: 4px 16px;
+        padding: 4px 11px;
         font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.04em;
+        text-decoration: none;
 
         @include sp() {
-          padding: vw(4) vw(16);
+          padding: vw(4) vw(11);
           font-size: vw(16);
         }
+      }
+    }
+
+    &--lager {
+      @include pc() {
+        padding: 20px 10px;
       }
     }
   }
@@ -74,6 +81,10 @@
       top: 50%;
       transform: translateY(-50%);
       transition: transform 0.3s ease-in-out;
+    }
+
+    &--under {
+      text-decoration: underline;
     }
   }
 }

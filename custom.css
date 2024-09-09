@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -706,15 +707,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-c-btn-primary--little {
-  padding: 4px 16px;
+  padding: 4px 11px;
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.04em;
+  text-decoration: none;
 }
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary--little {
-    padding: 1.0256410256vw 4.1025641026vw;
+    padding: 1.0256410256vw 2.8205128205vw;
     font-size: 4.1025641026vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-c-btn--lager {
+    padding: 20px 10px;
   }
 }
 .lp-c-link {
@@ -737,6 +744,9 @@ h1, h2, h3, h4, h5, h6 {
   top: 50%;
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
+}
+.lp-c-link--under {
+  text-decoration: underline;
 }
 
 .lp-head {
@@ -857,7 +867,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-table-thead {
   width: 220px;
-  padding: 7px 8px;
+  padding: 7.5px 8px;
   color: #fff;
   background-color: #6190E1;
   text-align: center;
@@ -865,6 +875,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
   letter-spacing: 0.04em;
   font-weight: bold;
+  vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
   .lp-table-thead {
@@ -903,7 +914,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.04em;
   color: #2D344B;
   font-weight: 400;
-  padding: 12px 16px;
+  padding: 8px 16px 16px;
 }
 @media screen and (max-width: 768px) {
   .lp-table tr td {
@@ -934,6 +945,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-table-user {
     width: 174.358974359vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-table-user thead tr th {
+    padding: 7px 8px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -975,6 +991,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-table-user tr:nth-of-type(even) {
   background-color: #F2F5FF;
+}
+.lp-table-user tr td {
+  vertical-align: middle;
+}
+@media screen and (min-width: 769px), print {
+  .lp-table-user tr td {
+    padding: 11.25px 16px 11.25px;
+  }
+  .lp-table-user tr td:nth-last-child(-n+2) {
+    text-align: center;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-table-user tr td {
@@ -1042,6 +1069,11 @@ h1, h2, h3, h4, h5, h6 {
 .lp-table-pay tr td {
   letter-spacing: 0.04em;
   line-height: 1.8;
+}
+@media screen and (min-width: 769px), print {
+  .lp-table-pay tr td {
+    padding: 12px 16px 12px;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-table-pay tr td {
@@ -1295,13 +1327,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lp-sec-multibox {
-  padding-top: 63px;
-  margin-bottom: 104px;
+  padding-top: 64px;
+  margin-bottom: 160px;
 }
 @media screen and (max-width: 768px) {
   .lp-sec-multibox {
     padding-top: 10.2564102564vw;
-    margin-bottom: 12.3076923077vw;
+    margin-bottom: 20.5128205128vw;
   }
 }
 .lp-card {
@@ -1309,6 +1341,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   gap: 24px;
   margin-bottom: 56px;
+  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-card {
@@ -1338,7 +1371,7 @@ h1, h2, h3, h4, h5, h6 {
 .lp-card-item {
   display: flex;
   flex-direction: column;
-  padding: 23px 23px 22px 23px;
+  padding: 22px 24px;
   border: 1px solid #D6D8E0;
   border-radius: 8px;
 }
@@ -1350,8 +1383,15 @@ h1, h2, h3, h4, h5, h6 {
 .lp-card-second .lp-card-item {
   height: 100%;
 }
-.lp-card-img {
-  margin-bottom: 8px;
+@media screen and (min-width: 769px), print {
+  .lp-card-second-img {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-card-img {
+    margin-bottom: 8px;
+  }
 }
 .lp-card-body {
   height: 100%;
@@ -1362,8 +1402,7 @@ h1, h2, h3, h4, h5, h6 {
 .lp-card-txt {
   font-size: 14px;
   line-height: 1.8;
-  letter-spacing: 0.04em;
-  letter-spacing: 0;
+  letter-spacing: -0.01em;
   color: #2D344B;
   margin-bottom: 24px;
   font-weight: 400;
@@ -1372,7 +1411,11 @@ h1, h2, h3, h4, h5, h6 {
   .lp-card-txt {
     font-size: 3.3333333333vw;
     margin-bottom: 4.1025641026vw;
-    letter-spacing: 0;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-card-letter-spacing {
+    letter-spacing: -0.05em;
   }
 }
 .lp-card-btn {
@@ -1399,6 +1442,21 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-card-link {
     font-size: 3.8461538462vw;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .accounting .lp-card-item {
+    padding: 23px 24px;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  .lp-card-second {
+    gap: 32px;
+  }
+  .lp-card-second li {
+    width: 268px;
   }
 }
 
@@ -1460,7 +1518,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-sec-infoprice .lp-infoprice-content:not(:last-child) {
-  margin-bottom: 80px;
+  margin-bottom: 78px;
 }
 @media screen and (max-width: 768px) {
   .lp-sec-infoprice .lp-infoprice-content:not(:last-child) {
@@ -1608,8 +1666,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 .lp-step .lp-table tr td:first-child {
-  padding: 12px 12px;
-  font-weight: bold;
+  padding: 0 12px;
 }
 @media screen and (max-width: 768px) and (max-width: 768px) {
   .lp-step .lp-table tr td:first-child {
@@ -1633,21 +1690,46 @@ h1, h2, h3, h4, h5, h6 {
 .lp-step .lp-table tr td:last-child td:last-child {
   border-bottom-right-radius: 4px;
 }
-.lp-step .lp-table tr:first-child td p {
+.lp-step .lp-table tr:first-child td {
   color: #0054AC;
 }
 .lp-step .lp-table tr:first-child td:first-child {
-  color: #0054AC;
+  font-weight: bold;
+}
+.lp-step .lp-table tr:first-child td p {
+  font-size: 28px;
+}
+@media screen and (max-width: 768px) {
+  .lp-step .lp-table tr:first-child td p {
+    font-size: 6.1538461538vw;
+  }
+}
+.lp-step .lp-table tr:first-child td .lp-yen {
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .lp-step .lp-table tr:first-child td .lp-yen {
+    font-size: 4.1025641026vw;
+  }
+}
+.lp-step .lp-table tr:first-child td .lp-month {
+  font-size: 14px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .lp-step .lp-table tr:first-child td .lp-month {
+    font-size: 3.5897435897vw;
+  }
 }
 .lp-step .lp-table tr p {
-  font-size: 28px;
-  line-height: 1.8;
+  font-size: 24px;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
   .lp-step .lp-table tr p {
-    font-size: 6.1538461538vw;
+    font-size: 5.1282051282vw;
   }
 }
 .lp-step .lp-table tr .lp-yen {
@@ -1675,11 +1757,126 @@ h1, h2, h3, h4, h5, h6 {
     border-top-left-radius: 1.0256410256vw !important;
   }
 }
+.lp-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  font-weight: 400;
+  color: #2D344B;
+  padding: 40px 0;
+  border-radius: 16px;
+  border: 1px solid #D6D8E0;
+  margin-bottom: 32px;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan {
+    padding: 8.2051282051vw 6.1538461538vw;
+    margin-bottom: 6.1538461538vw;
+  }
+}
+.lp-plan-item {
+  display: flex;
+  width: 500px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-item {
+    width: 100%;
+    -moz-column-gap: 2.0512820513vw;
+         column-gap: 2.0512820513vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-plan-item:first-child {
+    justify-content: flex-end;
+    border-right: 1px solid #D6D8E0;
+    padding-right: 88.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-item:first-child {
+    padding-bottom: 8.2051282051vw;
+    margin-bottom: 8.2051282051vw;
+    border-bottom: 1px solid #D6D8E0;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-plan-item:last-child {
+    justify-content: flex-start;
+    padding-left: 88.5px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .lp-plan .lp-plan-des {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.lp-plan figure {
+  width: 144px;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan figure {
+    width: 24.6153846154vw;
+  }
+}
+.lp-plan-title {
+  font-size: 20px;
+  line-height: 1.6;
+  font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-title {
+    font-size: 4.6153846154vw;
+    text-align: center;
+  }
+}
+.lp-plan-title span {
+  font-size: 32px;
+  color: #0054AC;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-title span {
+    font-size: 7.1794871795vw;
+  }
+}
+.lp-plan-title p {
+  font-size: 16px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-title p {
+    font-size: 3.8461538462vw;
+  }
+}
+.lp-plan-btn {
+  display: flex;
+  margin-top: 16px;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan-btn {
+    margin-top: 3.0769230769vw;
+  }
+}
+.lp-plan .lp-c-btn-primary--little {
+  min-width: 155px;
+  height: 37px;
+}
+@media screen and (max-width: 768px) {
+  .lp-plan .lp-c-btn-primary--little {
+    height: 8.7179487179vw;
+    min-width: 36.4102564103vw;
+  }
+}
 .lp-mailbox {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px 0;
+  gap: 32px 0;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox {
@@ -1690,7 +1887,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 560px;
   display: flex;
   justify-content: space-between;
-  padding: 32px 40px 32px 24px;
+  padding: 31px 40px 31px 24px;
   border-radius: 8px;
   border: 1px solid #D6D8E0;
 }
@@ -1738,7 +1935,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-mailbox-detail .lp-mailbox-inner:not(:first-child) {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox-detail .lp-mailbox-inner:not(:first-child) {
@@ -1746,22 +1943,25 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-mailbox-detail-list {
-  margin-top: 8px;
-  padding-left: 17px;
-  margin-left: 5px;
+  margin-top: 7px;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox-detail-list {
     margin-top: 2.0512820513vw;
-    padding-left: 4.358974359vw;
-    margin-left: 1.2820512821vw;
   }
 }
 .lp-mailbox-detail-item {
   font-size: 14px;
   line-height: 1.8;
   font-weight: 400;
-  list-style-type: disc;
+  padding-left: 22px;
+  position: relative;
+}
+.lp-mailbox-detail-item::after {
+  content: "•";
+  position: absolute;
+  top: 0;
+  left: 9px;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox-detail-item {
@@ -1835,6 +2035,11 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 800px;
   margin: 0 auto;
 }
+@media screen and (min-width: 769px), print {
+  .lp-faq-list {
+    padding-top: 40px;
+  }
+}
 .lp-faq-item:not(:last-child) {
   padding-bottom: 40px;
   margin-bottom: 40px;
@@ -1893,6 +2098,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 20.5128205128vw 0;
     margin-bottom: 20.5128205128vw;
     font-size: 3.8461538462vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-usagefee .lp-head-title {
+    margin-bottom: 56px;
   }
 }
 .lp-usagefee-case {
