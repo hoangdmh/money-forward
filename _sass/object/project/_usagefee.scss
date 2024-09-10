@@ -29,6 +29,8 @@
       justify-content: space-between;
 
       &-item {
+        display: flex;
+        flex-direction: column;
         width: 560px;
         background-color: $white_color;
         border-radius: 16px;
@@ -50,36 +52,83 @@
         color: $white_color;
         text-align: center;
         font-weight: bold;
-        font-size: 24px;
+        letter-spacing: 0.04em;
+        font-weight: bold;
         line-height: 1;
 
-        @include sp() {
-          font-size: vw(20);
+        p {
+          font-size: 24px;
+          line-height: 1;
+
+          span {
+            font-size: 18px;
+          }
         }
 
-        img {
-          width: 143px;
-          display: block;
-          margin: 0 auto 24px;
+        @include sp() {          
+          padding: 0 vw(10) vw(28);
+
+          p {
+            font-size: vw(20);
+            span {
+              font-size: vw(15);
+            }
+          }
+        }
+      }
+
+      &-title {
+        width: 143px;
+        height: 64px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: $table_thead_color;
+        font-size: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+        margin:  0 auto 24px;
+
+        @include sp(){
+          width: vw(134);
+          height: vw(52);
+          font-size: vw(18);
+          border-bottom-left-radius: vw(8);
+          border-bottom-right-radius: vw(8);
+          margin-bottom: vw(24);
+          padding-bottom: vw(12);
+        }
+
+        span {
+          font-size: 32px;
+          margin-left: 5px;
 
           @include sp() {
-            width: vw(134);
-            margin-bottom: vw(16);
+            font-size: vw(28);
+            margin-left: vw(3);
           }
         }
       }
 
       &-main {
+        height: 100%;
         padding: 32px 40px 48px;
+        border: 1px solid $border_color;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
 
         @include sp() {
           padding: vw(32) vw(32) vw(48);
+          border-bottom-left-radius: vw(16);
+          border-bottom-right-radius: vw(16);
         }
       }
 
       &-price {
-        padding-bottom: 32px;
-        margin-bottom: 32px;
+        padding-bottom: 31px;
+        margin-bottom: 31px;
         border-bottom: 1px solid $border_color;
         font-size: 16px;
         line-height: 1.6;
@@ -95,7 +144,7 @@
 
       &-per {
         width: 118px;
-        margin: 0 auto 16px;
+        margin: 0 auto 12px;
         padding: 8px 0;
         font-weight: bold;
         text-align: center;
@@ -104,7 +153,7 @@
         line-height: 1.4;
 
         @include sp() {
-          width: vw(116);
+          width: vw(118);
           margin-bottom: vw(16);
           font-size: vw(16);
           padding: vw(8) 0;
@@ -124,7 +173,7 @@
           font-weight: bold;
           font-size: 64px;
           color: $main_color;
-          margin-bottom: 15px;
+          margin-bottom: 18px;
 
           @include sp() {
             margin-bottom: vw(15);
@@ -222,6 +271,7 @@
           @include sp() {
             width: 100%;
             font-size: vw(15);
+            margin-top: vw(12);
           }
 
           strong {
@@ -239,6 +289,7 @@
 
           p {
             margin-top: 8px;
+            letter-spacing: -0.01em;
 
             @include sp() {
               margin-top: vw(8);

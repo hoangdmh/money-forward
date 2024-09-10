@@ -32,7 +32,9 @@
       text-align: center;
 
       @include pc() {
-        text-decoration: underline;
+        a {
+          text-decoration: underline;
+        }
       }
 
       @include sp() {

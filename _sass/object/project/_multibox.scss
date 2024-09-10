@@ -47,7 +47,7 @@
     &-item {
       display: flex;
       flex-direction: column;
-      padding: 22px 24px;
+      padding: 22px 23px;
       border: 1px solid $border_color;
       border-radius: 8px;
 
@@ -92,6 +92,10 @@
       @include sp() {
         font-size: vw(13);
         margin-bottom: vw(16);
+
+        &-lspace {
+          letter-spacing: -0.09em;
+        }
       }
     }
 
@@ -132,7 +136,7 @@
 .accounting {
   .lp-card-item {
     @include pc() {
-      padding: 23px 24px;
+      padding: 23px 23px;
     }
   }
 }

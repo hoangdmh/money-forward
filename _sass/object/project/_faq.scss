@@ -20,9 +20,13 @@
       width: 100%;
       max-width: 800px;
       margin: 0 auto;
-      
-      @include pc(){
+
+      @include pc() {
         padding-top: 40px;
+      }
+
+      @include sp() {
+        padding: 0 vw(10);
       }
     }
 
@@ -36,7 +40,7 @@
           padding-bottom: vw(40);
           margin-bottom: vw(40);
         }
-      }  
+      }
 
       a {
         font-weight: bold;
@@ -59,6 +63,30 @@
         font-size: vw(20);
         column-gap: vw(16);
         margin-bottom: vw(16);
+      }
+
+      &-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background-color: $table_row_color;
+        border-radius: 100%;
+
+        span {
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: 0;
+          color: $main_color;
+          text-transform: uppercase;
+        }
+
+        @include sp() {
+          width: vw(56);
+          height: vw(56);
+        }
       }
 
       img {
