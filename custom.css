@@ -695,11 +695,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 12px 25.5px;
   text-align: center;
 }
-@media screen and (min-width: 769px), print {
-  .lp-c-btn-primary a {
-    text-decoration: underline;
-  }
-}
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary {
     padding: 2.5641025641vw 6.5384615385vw;
@@ -711,7 +706,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 1.6;
   letter-spacing: 0.04em;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary--little {
@@ -732,7 +727,17 @@ h1, h2, h3, h4, h5, h6 {
   color: #2D344B;
   text-align: center;
   padding-right: 30px;
+  transition: color 0.3s ease, background-size 0.3s ease;
   position: relative;
+}
+@media screen and (min-width: 769px), print {
+  .lp-c-link {
+    background-image: linear-gradient(#0054AC, #0054AC);
+    background-repeat: no-repeat;
+    background-size: 0% 1px;
+    background-position: left 0 bottom;
+    padding-bottom: 6px;
+  }
 }
 .lp-c-link:after {
   content: "";
@@ -747,6 +752,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-c-link--under {
   text-decoration: underline;
+}
+@media screen and (min-width: 769px), print {
+  .lp-c-link:hover {
+    opacity: 1;
+    color: #0054AC;
+    background-size: 100% 1px;
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 769px), print {
+  a.lp-c-btn-primary {
+    text-decoration: underline;
+  }
 }
 
 .lp-head {
@@ -2115,6 +2134,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 3.8461538462vw;
     letter-spacing: -0.05em;
   }
+}
+.lp-mailbox-note {
+  font-size: 10px;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #2D344B;
 }
 
 .lp-faq {

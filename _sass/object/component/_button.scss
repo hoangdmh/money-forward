@@ -31,12 +31,6 @@
       padding: 12px 25.5px;
       text-align: center;
 
-      @include pc() {
-        a {
-          text-decoration: underline;
-        }
-      }
-
       @include sp() {
         padding: vw(10) vw(25.5);
         font-size: vw(16);
@@ -47,7 +41,7 @@
         font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.04em;
-        text-decoration: none;
+        text-decoration: none !important;
 
         @include sp() {
           padding: vw(4) vw(11);
@@ -71,6 +65,14 @@
     color: $base_color;
     text-align: center;
     padding-right: 30px;
+    transition: color .3s ease, background-size .3s ease;
+    @include pc() {
+      background-image: linear-gradient($main_color, $main_color);
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      background-position: left 0 bottom;
+      padding-bottom: 6px;
+    }
     position: relative;
 
     &:after {
@@ -88,5 +90,20 @@
     &--under {
       text-decoration: underline;
     }
+
+    @include pc() {
+      &:hover {
+        opacity: 1;
+        color: $main_color;
+        background-size: 100% 1px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+a.lp-c-btn-primary {
+  @include pc() {
+    text-decoration: underline;
   }
 }

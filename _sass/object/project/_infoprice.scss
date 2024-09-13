@@ -692,5 +692,12 @@
         letter-spacing: -0.05em;
       }
     }
+
+    &-note {
+      font-size: 10px;
+      line-height: 1.8;
+      letter-spacing: 0.04em;
+      color: $base_color;
+    }
   }
 }
