@@ -108,6 +108,8 @@
           @include sp() {
             font-size: vw(28);
             margin-left: vw(3);
+            position: relative;
+            top: vw(1);
           }
         }
       }

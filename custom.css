@@ -2343,6 +2343,8 @@ h1, h2, h3, h4, h5, h6 {
   .lp-usagefee-case-title span {
     font-size: 7.1794871795vw;
     margin-left: 0.7692307692vw;
+    position: relative;
+    top: 0.2564102564vw;
   }
 }
 .lp-usagefee-case-main {
