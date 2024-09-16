@@ -10,6 +10,15 @@
     font-weight: 400;
     letter-spacing: 0.04em;
 
+    @include pc() {
+      a {
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+    }
+
     @include sp() {
       padding: 0 0 vw(80);
       font-size: vw(15);

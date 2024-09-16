@@ -39,6 +39,13 @@
         font-size: vw(16);
       }
 
+      &:hover {
+        @include pc() {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+
       &--little {
         padding: 4px 11px;
         font-size: 18px;
@@ -46,17 +53,16 @@
         letter-spacing: 0.04em;
         text-decoration: none !important;
 
+        &:hover {
+          @include pc() {
+            opacity: $opacity-hover;
+          }
+        }
+
         @include sp() {
           min-width: vw(120);
           padding: vw(4) vw(11);
           font-size: vw(16);
-        }
-      }
-
-      &:hover {
-        @include pc() {
-          opacity: 1;
-          text-decoration: none
         }
       }
     }
@@ -91,16 +97,20 @@
       transition: transform 0.3s ease-in-out;
     }
 
-    &--under {
-      @include pc() {
+    @include pc() {
+      &:hover {
         text-decoration: underline;
+        opacity: 1;
       }
     }
 
-    @include pc() {
-      &:hover {
-        text-decoration: none;
-        opacity: 1;
+    &--under {
+      @include pc() {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }

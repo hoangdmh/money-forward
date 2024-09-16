@@ -454,11 +454,6 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@media screen and (min-width: 769px), print {
-  a:hover {
-    opacity: 0.75;
-  }
-}
 a[href^="tel:"] {
   text-decoration: none;
 }
@@ -705,6 +700,12 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4.1025641026vw;
   }
 }
+@media screen and (min-width: 769px), print {
+  .lp-c-btn-primary:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+}
 .lp-c-btn-primary--little {
   padding: 4px 11px;
   font-size: 18px;
@@ -712,17 +713,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.04em;
   text-decoration: none !important;
 }
+@media screen and (min-width: 769px), print {
+  .lp-c-btn-primary--little:hover {
+    opacity: 0.75;
+  }
+}
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary--little {
     min-width: 30.7692307692vw;
     padding: 1.0256410256vw 2.8205128205vw;
     font-size: 4.1025641026vw;
-  }
-}
-@media screen and (min-width: 769px), print {
-  .lp-c-btn-primary:hover {
-    opacity: 1;
-    text-decoration: none;
   }
 }
 @media screen and (min-width: 769px), print {
@@ -753,14 +753,17 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.3s ease-in-out;
 }
 @media screen and (min-width: 769px), print {
-  .lp-c-link--under {
+  .lp-c-link:hover {
     text-decoration: underline;
+    opacity: 1;
   }
 }
 @media screen and (min-width: 769px), print {
-  .lp-c-link:hover {
+  .lp-c-link--under {
+    text-decoration: underline;
+  }
+  .lp-c-link--under:hover {
     text-decoration: none;
-    opacity: 1;
   }
 }
 
@@ -1243,6 +1246,12 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-mainvisual {
     background: url("./img/lp_bg_mainVisual_sp.png") no-repeat top center/cover;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-mainvisual a:hover {
+    opacity: 1;
+    text-decoration: none;
   }
 }
 .lp-mainvisual-content {
@@ -2151,6 +2160,12 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.8;
   font-weight: 400;
   letter-spacing: 0.04em;
+}
+@media screen and (min-width: 769px), print {
+  .lp-faq a:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-faq {

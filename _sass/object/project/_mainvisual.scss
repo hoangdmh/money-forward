@@ -10,6 +10,15 @@
       background: url('./img/lp_bg_mainVisual_sp.png') no-repeat top center/cover;
     }
 
+    @include pc() {
+      a {
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+    }
+
     &-content {
       padding: 72px 0 80px;
       letter-spacing: 0.04em;

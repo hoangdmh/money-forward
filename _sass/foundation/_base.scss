@@ -39,14 +39,6 @@ a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-@include pc() {
-  a {
-    &:hover {
-      opacity: $opacity-hover;
-    }
-  }
-}
-
 // telリンク
 a[href^="tel:"] {
   // cursor: default;
