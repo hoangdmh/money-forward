@@ -13,6 +13,7 @@
     border: 2px solid $main_color;
     text-align: center;
     padding: 14px 10px;
+    transition: all .3s ease;
 
     @include sp() {
       padding: vw(14) vw(10);
@@ -20,6 +21,7 @@
     }
 
     &-primary {
+      min-width: 120px;
       display: block;
       background-color: $main_color;
       color: $white_color;
@@ -30,6 +32,7 @@
       border-radius: 100px;
       padding: 12px 25.5px;
       text-align: center;
+      transition: all .3s ease;
 
       @include sp() {
         padding: vw(10) vw(25.5);
@@ -44,8 +47,16 @@
         text-decoration: none !important;
 
         @include sp() {
+          min-width: vw(120);
           padding: vw(4) vw(11);
           font-size: vw(16);
+        }
+      }
+
+      &:hover {
+        @include pc() {
+          opacity: 1;
+          text-decoration: none
         }
       }
     }
@@ -65,14 +76,7 @@
     color: $base_color;
     text-align: center;
     padding-right: 30px;
-    transition: color .3s ease, background-size .3s ease;
-    @include pc() {
-      background-image: linear-gradient($main_color, $main_color);
-      background-repeat: no-repeat;
-      background-size: 0% 1px;
-      background-position: left 0 bottom;
-      padding-bottom: 6px;
-    }
+    transition: all .3s ease;
     position: relative;
 
     &:after {
@@ -88,15 +92,15 @@
     }
 
     &--under {
-      text-decoration: underline;
+      @include pc() {
+        text-decoration: underline;
+      }
     }
 
     @include pc() {
       &:hover {
-        opacity: 1;
-        color: $main_color;
-        background-size: 100% 1px;
         text-decoration: none;
+        opacity: 1;
       }
     }
   }

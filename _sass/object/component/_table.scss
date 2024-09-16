@@ -1,6 +1,7 @@
 .lp {
   &-table {
     width: 100%;
+    letter-spacing: 0.04em;
     border-spacing: 0;
     border-collapse: separate;
     --border: 1px solid #91AFF2;
@@ -96,7 +97,6 @@
       text-align: center;
       font-size: 18px;
       line-height: 1.6;
-      letter-spacing: 0.04em;
       font-weight: bold;
       vertical-align: middle;
 
@@ -138,7 +138,6 @@
       td {
         font-size: 16px;
         line-height: 1.6;
-        letter-spacing: 0.04em;
         color: $base_color;
         font-weight: 400;
         padding: 8px 16px 16px;
@@ -153,7 +152,6 @@
       .lp-table-cell {
         font-size: 20px;
         line-height: 1.4;
-        letter-spacing: 0.04em;
         font-weight: bold;
         color: $main_color;
 
@@ -242,7 +240,6 @@
             padding: vw(6) vw(12);
             line-height: 1.6;
             font-size: vw(14);
-            letter-spacing: 0.04em;
 
             &:nth-last-child(-n+2) {
               padding-right: vw(35);
@@ -317,7 +314,6 @@
         }
 
         td {
-          letter-spacing: 0.04em;
           line-height: 1.8;
 
           @include pc() {
@@ -347,7 +343,6 @@
             display: block;
             font-size: 14px;
             font-weight: 400;
-            letter-spacing: 0;
 
             @include sp() {
               font-size: vw(13);
@@ -357,7 +352,6 @@
           span {
             font-size: 16px;
             font-weight: 400;
-            letter-spacing: 0;
 
             @include sp() {
               font-size: vw(14);
@@ -376,7 +370,6 @@
         font-size: 18px;
         font-weight: bold;
         line-height: 1.6;
-        letter-spacing: 0.04em;
         vertical-align: middle;
 
         @include sp() {
@@ -394,7 +387,6 @@
 
       .lp-business {
         line-height: 1.4;
-        letter-spacing: 0.04em;
         font-weight: bold;
         text-align: center;
 

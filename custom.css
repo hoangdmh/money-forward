@@ -526,6 +526,7 @@ textarea {
 #lp-wrapper {
   overflow: hidden;
   position: relative;
+  font-feature-settings: "palt" on;
 }
 
 .lp-inner {
@@ -676,6 +677,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 2px solid #0054AC;
   text-align: center;
   padding: 14px 10px;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 768px) {
   .lp-c-btn {
@@ -684,6 +686,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-c-btn-primary {
+  min-width: 120px;
   display: block;
   background-color: #0054AC;
   color: #fff;
@@ -694,6 +697,7 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 100px;
   padding: 12px 25.5px;
   text-align: center;
+  transition: all 0.3s ease;
 }
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary {
@@ -710,8 +714,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   .lp-c-btn-primary--little {
+    min-width: 30.7692307692vw;
     padding: 1.0256410256vw 2.8205128205vw;
     font-size: 4.1025641026vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-c-btn-primary:hover {
+    opacity: 1;
+    text-decoration: none;
   }
 }
 @media screen and (min-width: 769px), print {
@@ -727,17 +738,8 @@ h1, h2, h3, h4, h5, h6 {
   color: #2D344B;
   text-align: center;
   padding-right: 30px;
-  transition: color 0.3s ease, background-size 0.3s ease;
+  transition: all 0.3s ease;
   position: relative;
-}
-@media screen and (min-width: 769px), print {
-  .lp-c-link {
-    background-image: linear-gradient(#0054AC, #0054AC);
-    background-repeat: no-repeat;
-    background-size: 0% 1px;
-    background-position: left 0 bottom;
-    padding-bottom: 6px;
-  }
 }
 .lp-c-link:after {
   content: "";
@@ -750,15 +752,15 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateY(-50%);
   transition: transform 0.3s ease-in-out;
 }
-.lp-c-link--under {
-  text-decoration: underline;
+@media screen and (min-width: 769px), print {
+  .lp-c-link--under {
+    text-decoration: underline;
+  }
 }
 @media screen and (min-width: 769px), print {
   .lp-c-link:hover {
-    opacity: 1;
-    color: #0054AC;
-    background-size: 100% 1px;
     text-decoration: none;
+    opacity: 1;
   }
 }
 
@@ -805,7 +807,7 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-head-subtitle {
     font-size: 5.1282051282vw;
-    letter-spacing: 0.01em;
+    padding: 0 3.0769230769vw;
     text-align: left;
   }
 }
@@ -816,6 +818,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .lp-table {
   width: 100%;
+  letter-spacing: 0.04em;
   border-spacing: 0;
   border-collapse: separate;
   --border: 1px solid #91AFF2;
@@ -892,7 +895,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-size: 18px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
   font-weight: bold;
   vertical-align: middle;
 }
@@ -930,7 +932,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-table tr td {
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
   color: #2D344B;
   font-weight: 400;
   padding: 8px 16px 16px;
@@ -945,7 +946,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-table tr .lp-table-cell {
   font-size: 20px;
   line-height: 1.4;
-  letter-spacing: 0.04em;
   font-weight: bold;
   color: #0054AC;
 }
@@ -1027,7 +1027,6 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5384615385vw 3.0769230769vw;
     line-height: 1.6;
     font-size: 3.5897435897vw;
-    letter-spacing: 0.04em;
   }
   .lp-table-user tr td:nth-last-child(-n+2) {
     padding-right: 8.9743589744vw;
@@ -1086,7 +1085,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 0;
 }
 .lp-table-pay tr td {
-  letter-spacing: 0.04em;
   line-height: 1.8;
 }
 @media screen and (min-width: 769px), print {
@@ -1117,7 +1115,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0;
 }
 @media screen and (max-width: 768px) {
   .lp-table-pay tr td small {
@@ -1127,7 +1124,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-table-pay tr td span {
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: 0;
 }
 @media screen and (max-width: 768px) {
   .lp-table-pay tr td span {
@@ -1143,7 +1139,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   font-weight: bold;
   line-height: 1.6;
-  letter-spacing: 0.04em;
   vertical-align: middle;
 }
 @media screen and (max-width: 768px) {
@@ -1160,7 +1155,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-table-pay .lp-business {
   line-height: 1.4;
-  letter-spacing: 0.04em;
   font-weight: bold;
   text-align: center;
 }
@@ -1243,6 +1237,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lp-mainvisual {
+  font-feature-settings: unset;
   background: url("./img/lp_bg_mainVisual.png") no-repeat top center/cover;
 }
 @media screen and (max-width: 768px) {
@@ -1253,6 +1248,28 @@ h1, h2, h3, h4, h5, h6 {
 .lp-mainvisual-content {
   padding: 72px 0 80px;
   letter-spacing: 0.04em;
+  position: relative;
+}
+.lp-mainvisual-content::after {
+  content: "";
+  width: 400px;
+  height: 400px;
+  background: url("./img/lp_photo_manvisual.png") no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+@media screen and (max-width: 768px) {
+  .lp-mainvisual-content::after {
+    width: 61.0256410256vw;
+    height: 56.9230769231vw;
+    background: url("./img/lp_photo_manvisual_sp.png") no-repeat;
+    background-size: contain;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-mainvisual-content {
@@ -1276,7 +1293,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 48px;
   font-weight: bold;
   line-height: 1.6;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   margin-bottom: 24px;
 }
 @media screen and (max-width: 768px) {
@@ -1297,6 +1314,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #2D344B;
   font-size: 16px;
   font-weight: 400;
+  letter-spacing: 0.08em;
   line-height: 1.8;
 }
 @media screen and (max-width: 768px) {
@@ -1311,8 +1329,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-mainvisual-txt strong {
   font-size: 20px;
-  font-weight: bold;
-  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-mainvisual-txt strong {
@@ -1320,35 +1336,21 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 4.6153846154vw;
   }
 }
-.lp-mainvisual-txt span {
+.lp-mainvisual-txt .txt-marker {
   background: rgb(255, 239, 194);
   background: linear-gradient(360deg, rgb(255, 239, 194) 0%, rgb(255, 239, 194) 22%, rgba(255, 255, 255, 0) 22%, rgba(255, 255, 255, 0) 100%);
 }
-.lp-mainvisual-txt sup {
-  font-weight: bold;
-}
-@media screen and (min-width: 769px), print {
-  .lp-mainvisual-link {
-    line-height: 2.44;
-  }
-}
-@media screen and (max-width: 768px) {
-  .lp-mainvisual-link {
-    margin-top: 1.0256410256vw;
-    margin-bottom: 3.5897435897vw;
-  }
-}
-.lp-mainvisual-note {
+.lp-mainvisual-txt .txt-note {
   font-size: 14px;
   line-height: 1.4;
-  letter-spacing: 0;
-  margin-top: 8px;
+  letter-spacing: 0.04em;
+  margin-top: 17px;
 }
 @media screen and (max-width: 768px) {
-  .lp-mainvisual-note {
+  .lp-mainvisual-txt .txt-note {
     line-height: 1.6;
     font-size: 3.3333333333vw;
-    margin-top: 0;
+    margin-top: 4.358974359vw;
   }
 }
 
@@ -1428,7 +1430,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-card-txt {
   font-size: 14px;
   line-height: 1.8;
-  letter-spacing: -0.01em;
   color: #2D344B;
   margin-bottom: 24px;
   font-weight: 400;
@@ -1437,14 +1438,6 @@ h1, h2, h3, h4, h5, h6 {
   .lp-card-txt {
     font-size: 3.3333333333vw;
     margin-bottom: 4.1025641026vw;
-  }
-  .lp-card-txt-lspace {
-    letter-spacing: -0.09em;
-  }
-}
-@media screen and (min-width: 769px), print {
-  .lp-card-letter-spacing {
-    letter-spacing: -0.05em;
   }
 }
 .lp-card-btn {
@@ -1471,6 +1464,12 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-card-link {
     font-size: 3.8461538462vw;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-card-link:hover {
+    text-decoration: none;
+    opacity: 1;
   }
 }
 
@@ -1517,6 +1516,7 @@ h1, h2, h3, h4, h5, h6 {
   .lp-sec-infoprice .lp-infoprice-content .lp-description {
     font-size: 3.8461538462vw;
     text-align: left;
+    padding: 0 3.0769230769vw;
     margin-bottom: 8.2051282051vw;
   }
 }
@@ -1559,6 +1559,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 64px;
+  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-step {
@@ -1647,8 +1648,8 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   line-height: 1;
   font-size: 20px;
-  letter-spacing: 0.04em;
   text-transform: uppercase;
+  font-family: "Helvetica", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .lp-step-head strong {
@@ -1680,7 +1681,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-step-head p {
   font-size: 24px;
   line-height: 1;
-  letter-spacing: 0.04em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -1709,7 +1709,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-size: 18px;
   line-height: 1.8;
-  letter-spacing: 0.04em;
   font-weight: 400;
 }
 @media screen and (max-width: 768px) {
@@ -1740,7 +1739,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-step .lp-table tr td > span {
   font-size: 14px;
   font-weight: 400;
-  letter-spacing: 0.04em;
   line-height: 1.8;
 }
 @media screen and (max-width: 768px) {
@@ -1791,7 +1789,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-step .lp-table tr p {
   font-size: 24px;
   line-height: 1.5;
-  letter-spacing: 0.04em;
   font-weight: bold;
 }
 @media screen and (max-width: 768px) {
@@ -1841,7 +1838,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.04em;
   font-weight: 400;
   color: #2D344B;
-  padding: 40px 0;
+  padding: 40px 0 39px;
   border-radius: 16px;
   border: 1px solid #D6D8E0;
   margin-bottom: 32px;
@@ -1871,6 +1868,9 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid #D6D8E0;
     padding-right: 88.5px;
   }
+  .lp-plan-item:first-child .lp-plan-btn .lp-c-btn-primary--little {
+    min-width: 227px;
+  }
 }
 @media screen and (max-width: 768px) {
   .lp-plan-item:first-child {
@@ -1883,6 +1883,11 @@ h1, h2, h3, h4, h5, h6 {
   .lp-plan-item:last-child {
     justify-content: flex-start;
     padding-left: 88.5px;
+  }
+}
+@media screen and (min-width: 769px), print {
+  .lp-plan .lp-plan-des {
+    margin-top: 10px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1903,14 +1908,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (max-width: 768px) {
   .lp-plan-des {
-    margin-top: 9px;
+    margin-top: 1.5384615385vw;
   }
 }
 .lp-plan-title {
   font-size: 20px;
   line-height: 1.6;
   font-weight: bold;
-  letter-spacing: -0.01em;
 }
 @media screen and (max-width: 768px) {
   .lp-plan-title {
@@ -1922,6 +1926,7 @@ h1, h2, h3, h4, h5, h6 {
 .lp-plan-title span {
   font-size: 32px;
   color: #0054AC;
+  font-family: "Helvetica", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .lp-plan-title span {
@@ -1940,7 +1945,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .lp-plan-btn {
   display: flex;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 @media screen and (max-width: 768px) {
   .lp-plan-btn {
@@ -1962,6 +1967,7 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 32px 0;
+  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox {
@@ -2046,7 +2052,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-mailbox-detail {
   width: 312px;
   color: #2D344B;
-  letter-spacing: 0;
 }
 @media screen and (max-width: 768px) {
   .lp-mailbox-detail {
@@ -2102,7 +2107,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   margin-bottom: 16px;
   color: #0054AC;
-  letter-spacing: 0.04em;
   font-size: 20px;
   line-height: 1;
   font-weight: bold;
@@ -2132,13 +2136,11 @@ h1, h2, h3, h4, h5, h6 {
 @media screen and (max-width: 768px) {
   .lp-mailbox-txt {
     font-size: 3.8461538462vw;
-    letter-spacing: -0.05em;
   }
 }
 .lp-mailbox-note {
   font-size: 10px;
   line-height: 1.8;
-  letter-spacing: 0.04em;
   color: #2D344B;
 }
 
@@ -2146,10 +2148,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 0 120px;
   color: #2D344B;
   font-size: 16px;
-  letter-spacing: 0.04em;
-  letter-spacing: 0;
   line-height: 1.8;
   font-weight: 400;
+  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-faq {
@@ -2223,6 +2224,7 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0;
   color: #0054AC;
   text-transform: uppercase;
+  font-family: "Helvetica", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .lp-faq-question-icon {
@@ -2288,8 +2290,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
   text-align: center;
   font-weight: bold;
-  letter-spacing: 0.04em;
-  font-weight: bold;
   line-height: 1;
 }
 .lp-usagefee-case-label p {
@@ -2318,6 +2318,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   background-color: #6190E1;
   font-size: 20px;
+  font-family: "Helvetica", sans-serif;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   text-transform: uppercase;
@@ -2338,12 +2339,13 @@ h1, h2, h3, h4, h5, h6 {
 .lp-usagefee-case-title span {
   font-size: 32px;
   margin-left: 5px;
+  position: relative;
+  top: 2px;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case-title span {
     font-size: 7.1794871795vw;
     margin-left: 0.7692307692vw;
-    position: relative;
     top: 0.2564102564vw;
   }
 }
@@ -2367,14 +2369,12 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid #D6D8E0;
   font-size: 16px;
   line-height: 1.6;
-  letter-spacing: 0.04em;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case-price {
     padding-bottom: 8.2051282051vw;
     margin-bottom: 8.2051282051vw;
     font-size: 3.8461538462vw;
-    letter-spacing: 0;
   }
 }
 .lp-usagefee-case-per {
@@ -2410,6 +2410,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 64px;
   color: #0054AC;
   margin-bottom: 18px;
+  font-family: "Helvetica", sans-serif;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case-amount p {
@@ -2437,7 +2438,6 @@ h1, h2, h3, h4, h5, h6 {
 .lp-usagefee-case-annually {
   width: 315px;
   margin: 0 auto;
-  letter-spacing: 0;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case-annually {
@@ -2456,7 +2456,6 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   -moz-column-gap: 16px;
        column-gap: 16px;
-  letter-spacing: 0;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case dl {
@@ -2524,8 +2523,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .lp-usagefee-case dl dd p {
-  margin-top: 8px;
-  letter-spacing: -0.01em;
+  margin-top: 10px;
 }
 @media screen and (max-width: 768px) {
   .lp-usagefee-case dl dd p {
@@ -2540,7 +2538,6 @@ h1, h2, h3, h4, h5, h6 {
        column-gap: 16px;
   font-size: 14px;
   line-height: 1.6;
-  letter-spacing: 0;
   font-weight: 400;
   margin-top: 24px;
 }
@@ -2552,5 +2549,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .lp-usagefee-case-note li {
     width: 100%;
+    text-indent: -3.8461538462vw;
+    padding-left: 3.8461538462vw;
   }
 }/*# sourceMappingURL=custom.css.map */

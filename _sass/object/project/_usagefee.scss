@@ -52,8 +52,6 @@
         color: $white_color;
         text-align: center;
         font-weight: bold;
-        letter-spacing: 0.04em;
-        font-weight: bold;
         line-height: 1;
 
         p {
@@ -65,11 +63,12 @@
           }
         }
 
-        @include sp() {          
+        @include sp() {
           padding: 0 vw(10) vw(28);
 
           p {
             font-size: vw(20);
+
             span {
               font-size: vw(15);
             }
@@ -85,13 +84,14 @@
         justify-content: center;
         background-color: $table_thead_color;
         font-size: 20px;
+        font-family: "Helvetica", sans-serif;
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         text-transform: uppercase;
         padding-bottom: 16px;
-        margin:  0 auto 24px;
+        margin: 0 auto 24px;
 
-        @include sp(){
+        @include sp() {
           width: vw(134);
           height: vw(52);
           font-size: vw(18);
@@ -104,11 +104,12 @@
         span {
           font-size: 32px;
           margin-left: 5px;
+          position: relative;
+          top: 2px;
 
           @include sp() {
             font-size: vw(28);
             margin-left: vw(3);
-            position: relative;
             top: vw(1);
           }
         }
@@ -134,13 +135,11 @@
         border-bottom: 1px solid $border_color;
         font-size: 16px;
         line-height: 1.6;
-        letter-spacing: 0.04em;
 
         @include sp() {
           padding-bottom: vw(32);
           margin-bottom: vw(32);
           font-size: vw(15);
-          letter-spacing: 0;
         }
       }
 
@@ -176,6 +175,7 @@
           font-size: 64px;
           color: $main_color;
           margin-bottom: 18px;
+          font-family: 'Helvetica', sans-serif;
 
           @include sp() {
             margin-bottom: vw(15);
@@ -204,7 +204,6 @@
       &-annually {
         width: 315px;
         margin: 0 auto;
-        letter-spacing: 0;
 
         @include sp() {
           width: 100%;
@@ -224,7 +223,6 @@
       dl {
         display: flex;
         column-gap: 16px;
-        letter-spacing: 0;
 
         @include sp() {
           flex-wrap: wrap;
@@ -290,8 +288,7 @@
           }
 
           p {
-            margin-top: 8px;
-            letter-spacing: -0.01em;
+            margin-top: 10px;
 
             @include sp() {
               margin-top: vw(8);
@@ -307,7 +304,6 @@
         column-gap: 16px;
         font-size: 14px;
         line-height: 1.6;
-        letter-spacing: 0;
         font-weight: 400;
         margin-top: 24px;
 
@@ -318,6 +314,8 @@
 
           li {
             width: 100%;
+            text-indent: vw(-15);
+            padding-left: vw(15);
           }
         }
       }

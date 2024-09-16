@@ -39,7 +39,7 @@
 
       @include sp() {
         font-size: vw(20);
-        letter-spacing: 0.01em;
+        padding: 0 vw(12);
         text-align: left;
       } 
 

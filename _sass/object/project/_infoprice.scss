@@ -29,6 +29,7 @@
         @include sp() {
           font-size: vw(15);
           text-align: left;
+          padding: 0 vw(12);
           margin-bottom: vw(32);
         }
       }
@@ -74,6 +75,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     padding-top: 64px;
+    letter-spacing: 0.04em;
 
     @include sp() {
       padding-top: vw(40);
@@ -162,8 +164,8 @@
         align-items: center;
         line-height: 1;
         font-size: 20px;
-        letter-spacing: 0.04em;
         text-transform: uppercase;
+        font-family: 'Helvetica', sans-serif;
 
         @include sp() {
           font-size: vw(20);
@@ -195,7 +197,6 @@
       p {
         font-size: 24px;
         line-height: 1;
-        letter-spacing: 0.04em;
         font-weight: bold;
 
         @include sp() {
@@ -225,7 +226,6 @@
       text-align: center;
       font-size: 18px;
       line-height: 1.8;
-      letter-spacing: 0.04em;
       font-weight: 400;
 
       @include sp() {
@@ -267,7 +267,6 @@
           &>span {
             font-size: 14px;
             font-weight: 400;
-            letter-spacing: 0.04em;
             line-height: 1.8;
 
             @include sp() {
@@ -330,7 +329,6 @@
         p {
           font-size: 24px;
           line-height: 1.5;
-          letter-spacing: 0.04em;
           font-weight: bold;
 
           @include sp() {
@@ -389,7 +387,7 @@
     letter-spacing: 0.04em;
     font-weight: 400;
     color: $base_color;
-    padding: 40px 0;
+    padding: 40px 0 39px;
     border-radius: 16px;
     border: 1px solid $border_color;
     margin-bottom: 32px;
@@ -414,6 +412,12 @@
           justify-content: flex-end;
           border-right: 1px solid #D6D8E0;
           padding-right: 88.5px;
+
+          .lp-plan-btn {
+            .lp-c-btn-primary--little {
+              min-width: 227px;
+            }
+          }
         }
 
         @include sp() {
@@ -433,6 +437,10 @@
     }
 
     .lp-plan-des {
+      @include pc() {
+        margin-top: 10px;
+      }
+
       @include sp() {
         flex: 1;
         display: flex;
@@ -451,7 +459,7 @@
 
     &-des {
       @include sp() {
-        margin-top: 9px;
+        margin-top: vw(6);
       }
     }
 
@@ -459,7 +467,6 @@
       font-size: 20px;
       line-height: 1.6;
       font-weight: bold;
-      letter-spacing: -0.01em;
 
       @include sp() {
         font-size: vw(18);
@@ -470,6 +477,7 @@
       span {
         font-size: 32px;
         color: $main_color;
+        font-family: 'Helvetica', sans-serif;
 
         @include sp() {
           font-size: vw(28);
@@ -489,7 +497,7 @@
 
     &-btn {
       display: flex;
-      margin-top: 20px;
+      margin-top: 18px;
 
       @include sp() {
         margin-top: vw(12);
@@ -512,6 +520,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 32px 0;
+    letter-spacing: 0.04em;
 
     @include sp() {
       gap: vw(16) 0;
@@ -601,7 +610,6 @@
     &-detail {
       width: 312px;
       color: $base_color;
-      letter-spacing: 0;
 
       @include sp() {
         width: 100%;
@@ -660,7 +668,6 @@
       text-align: center;
       margin-bottom: 16px;
       color: $main_color;
-      letter-spacing: 0.04em;
       font-size: 20px;
       line-height: 1;
       font-weight: bold;
@@ -689,14 +696,12 @@
 
       @include sp() {
         font-size: vw(15);
-        letter-spacing: -0.05em;
       }
     }
 
     &-note {
       font-size: 10px;
       line-height: 1.8;
-      letter-spacing: 0.04em;
       color: $base_color;
     }
   }
