@@ -1,0 +1,472 @@
+.lp {
+  &-table {
+    width: 100%;
+    letter-spacing: 0.04em;
+    border-spacing: 0;
+    border-collapse: separate;
+    --border: 1px solid #91AFF2;
+    --radius: 16px;
+
+    thead {
+      th {
+        &:last-child {
+          border-right: var(--border);
+          border-top-right-radius: var(--radius);
+
+          @include sp() {
+            border-top-right-radius: vw(16);
+          }
+        }
+
+        &:nth-last-child(2) {
+          border-top-left-radius: var(--radius);
+
+          @include sp() {
+            border-top-left-radius: vw(16);
+          }
+        }
+
+        &:nth-last-child(-n+2) {
+          border-top: var(--border);
+          border-left: var(--border);
+        }
+      }
+    }
+
+    tr {
+      td {
+        border: var(--border);
+
+        &:not(:last-child) {
+          border-right: none;
+        }
+      }
+
+      &:not(:last-child) {
+        td {
+          border-bottom: none;
+        }
+      }
+
+      &:last-child {
+        td {
+          &:first-child {
+            border-bottom-left-radius: var(--radius);
+
+            @include sp() {
+              border-bottom-left-radius: vw(16);
+            }
+          }
+
+          &:last-child {
+            border-bottom-right-radius: var(--radius);
+
+            @include sp() {
+              border-bottom-right-radius: vw(16);
+            }
+          }
+        }
+      }
+    }
+
+    .lp-bb-left-radius {
+      border-bottom-left-radius: 4px !important;
+    }
+
+    .lp-bb-right-radius {
+      border-bottom-right-radius: 4px !important;
+    }
+
+    .lp-bt-left-radius {
+      border-top-left-radius: 16px !important;
+
+      @include sp() {
+        border-top-left-radius: vw(16) !important;
+      }
+    }
+
+    .lp-bt-right-radius {
+      border-top-right-radius: 4px !important;
+    }
+
+    &-thead {
+      width: 220px;
+      padding: 7.5px 8px;
+      color: $white_color;
+      background-color: $table_thead_color;
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: bold;
+      vertical-align: middle;
+
+      @include sp() {
+        width: vw(139);
+        font-size: vw(15);
+        padding: vw(7.5) 0;
+      }
+
+      span {
+        display: block;
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+
+        @include sp() {
+          font-size: vw(13);
+        }
+      }
+    }
+
+    &-cell {
+      background-color: $table_tbody_color;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    .lp-img-check {
+      width: 24px;
+      margin: 0 auto;
+    }
+
+    .lp-cell-center {
+      text-align: center;
+      vertical-align: middle;
+    }
+
+    tr {
+      td {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $base_color;
+        font-weight: 400;
+        padding: 8px 16px 16px;
+
+        @include sp() {
+          font-size: vw(15);
+          line-height: 1.4;
+          padding: vw(8) vw(14.5) vw(16);
+        }
+      }
+
+      .lp-table-cell {
+        font-size: 20px;
+        line-height: 1.4;
+        font-weight: bold;
+        color: $main_color;
+
+        @include sp() {
+          font-size: vw(15);
+          padding: vw(17) vw(8);
+        }
+      }
+    }
+
+    &-scroll {
+      @include sp() {
+        width: 100%;
+        overflow-x: scroll;
+      }
+    }
+
+    &-user {
+      @include sp() {
+        width: vw(680);
+      }
+
+      thead {
+        tr {
+          th {
+            @include pc() {
+              padding: 7px 8px;
+            }
+
+            @include sp() {
+              padding-right: 20px;
+            }
+          }
+        }
+
+        .col-1 {
+          width: 216px;
+
+          @include sp() {
+            width: vw(80);
+          }
+        }
+
+        .col-2 {
+          width: 464px;
+
+          @include sp() {
+            width: vw(200);
+          }
+        }
+
+        .col-3 {
+          width: 240px;
+
+          @include sp() {
+            width: vw(200);
+          }
+        }
+
+        .col-4 {
+          width: 240px;
+
+          @include sp() {
+            width: vw(200);
+          }
+        }
+      }
+
+      tr {
+        &:nth-of-type(even) {
+          background-color: $table_row_color;
+        }
+
+        td {
+          vertical-align: middle;
+
+          @include pc() {
+            padding: 11.3px 16px;
+
+            &:nth-last-child(-n+2) {
+              text-align: center;
+            }
+          }
+
+          @include sp() {
+            padding: vw(4.5) vw(12);
+            line-height: 1.6;
+            font-size: vw(14);
+
+            &:nth-last-child(-n+2) {
+              padding-right: vw(35);
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+
+    &-pay {
+      @include sp() {
+        width: vw(656);
+      }
+
+      thead {
+        .col-1 {
+          width: 200px;
+
+          @include sp() {
+            width: vw(112);
+          }
+        }
+
+        .col-2 {
+          width: 320px;
+
+          @include sp() {
+            width: vw(160);
+          }
+        }
+
+        .col-3 {
+          width: 240px;
+
+          @include sp() {
+            width: vw(144);
+          }
+        }
+
+        .col-4 {
+          width: 400px;
+
+          @include sp() {
+            width: vw(240);
+          }
+        }
+      }
+
+      tr {
+        &:first-child {
+          td {
+            &:first-child {
+              border-top-left-radius: var(--radius);
+              border-bottom-left-radius: var(--radius);
+              border-bottom: var(--border);
+
+              @include sp() {
+                border-top-left-radius: vw(16);
+                border-bottom-left-radius: vw(16);
+              }
+            }
+          }
+        }
+
+        &:last-child {
+          td {
+            &:first-child {
+              border-radius: 0;
+            }
+          }
+        }
+
+        td {
+          line-height: 1.8;
+
+          @include pc() {
+            padding: 11.8px 16px;
+          }
+
+          @include sp() {
+            line-height: 1.6;
+          }
+
+          &:nth-last-child(-n+2) {
+            @include sp() {
+              padding: vw(6) vw(12);
+            }
+          }
+
+          strong {
+            font-size: 18px;
+            font-weight: bold;
+
+            @include sp() {
+              font-size: vw(15);
+            }
+          }
+
+          small {
+            display: block;
+            font-size: 14px;
+            font-weight: 400;
+
+            @include sp() {
+              font-size: vw(13);
+            }
+          }
+
+          span {
+            font-size: 16px;
+            font-weight: 400;
+
+            @include sp() {
+              font-size: vw(14);
+            }
+          }
+        }
+      }
+
+      .lp-br-none {
+        border-right: none;
+      }
+
+      .lp-bg-cell {
+        background-color: $table_row_color;
+        color: $main_color;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+        vertical-align: middle;
+
+        @include sp() {
+          font-size: vw(15);
+          padding: vw(6) vw(12);
+        }
+      }
+
+      .lp-table-cell {
+        @include pc() {
+          padding-right: 24px;
+          padding-left: 24px;
+        }
+      }
+
+      .lp-business {
+        line-height: 1.4;
+        font-weight: bold;
+        text-align: center;
+
+        &-title {
+          background-color: $main_color;
+          color: $white_color;
+          border-radius: 4px;
+          padding: 6px;
+          font-size: 20px;
+          margin-bottom: 32px;
+
+          @include sp() {
+            font-size: vw(18);
+            padding: vw(5) vw(5);
+            margin-bottom: vw(24);
+          }
+        }
+
+        &-content {
+          padding: 24px 16px 8px;
+          border: 1px solid $main_color;
+          border-radius: 4px;
+          position: relative;
+
+          @include sp() {
+            padding: vw(20) vw(8) vw(8);
+          }
+        }
+
+        &-label {
+          width: 84px;
+          font-size: 16px;
+          letter-spacing: 0.08em;
+          background-color: $table_tbody_color;
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -12px);
+
+          @include sp() {
+            width: vw(68);
+            font-size: vw(15);
+            transform: translate(-50%, -vw(12));
+          }
+        }
+
+        &-plan {
+          background-color: $table_thead_color;
+          padding: 4px;
+          border-radius: 4px;
+          color: $white_color;
+          font-size: 16px;
+          margin-bottom: 8px;
+
+          @include sp() {
+            font-size: vw(14);
+            padding: vw(4) 0;
+            margin-bottom: vw(8);
+          }
+        }
+
+        &-money {
+          font-size: 18px;
+          margin-bottom: 16px;
+
+          @include sp() {
+            font-size: vw(15);
+            margin-bottom: vw(12);
+          }
+
+          span {
+            font-weight: bold;
+            font-size: 14px;
+
+            @include sp() {
+              font-size: vw(13);
+            }
+          }
+        }
+      }
+    }
+  }
+}

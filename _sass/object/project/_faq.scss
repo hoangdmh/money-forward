@@ -1,0 +1,113 @@
+// -----------------------------------------------------------------
+// faq
+// -----------------------------------------------------------------
+.lp {
+  &-faq {
+    padding: 0 0 120px;
+    color: $base_color;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+
+    @include pc() {
+      a {
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+    }
+
+    @include sp() {
+      padding: 0 0 vw(80);
+      font-size: vw(15);
+    }
+
+    &-list {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+
+      @include pc() {
+        padding-top: 40px;
+      }
+
+      @include sp() {
+        padding: 0 vw(12);
+      }
+    }
+
+    &-item {
+      &:not(:last-child) {
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #D6D8E0;
+
+        @include sp() {
+          padding-bottom: vw(40);
+          margin-bottom: vw(40);
+        }
+      }
+
+      a {
+        font-weight: bold;
+        color: $main_color;
+        text-decoration: underline;
+      }
+    }
+
+    &-question {
+      display: flex;
+      align-items: center;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      line-height: 1.6;
+      font-weight: bold;
+      column-gap: 16px;
+      margin-bottom: 16px;
+
+      @include sp() {
+        font-size: vw(20);
+        column-gap: vw(16);
+        margin-bottom: vw(16);
+      }
+
+      &-icon {
+        width: 56px;
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        background-color: $table_row_color;
+        border-radius: 100%;
+
+        span {
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: 0;
+          color: $main_color;
+          text-transform: uppercase;
+          font-family: 'Helvetica', sans-serif;
+        }
+
+        @include sp() {
+          width: vw(56);
+          height: vw(56);
+        }
+      }
+
+      img {
+        width: 56px;
+
+        @include sp() {
+          width: vw(56);
+        }
+      }
+    }
+    &-answer {
+      text-align: justify;
+    }
+  }
+}

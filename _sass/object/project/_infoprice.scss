@@ -1,0 +1,718 @@
+// -----------------------------------------------------------------
+// infoprice
+// -----------------------------------------------------------------
+.lp {
+  &-sec-infoprice {
+    margin-bottom: 120px;
+
+    @include sp() {
+      margin-bottom: vw(80);
+    }
+
+    .lp-infoprice-content {
+      .lp-c-btn {
+        margin-bottom: 48px;
+
+        @include sp() {
+          margin-bottom: vw(32);
+        }
+      }
+
+      .lp-description {
+        text-align: center;
+        margin-bottom: 48px;
+        font-size: 16px;
+        line-height: 1.8;
+        letter-spacing: 0.08em;
+        font-weight: 400;
+
+        @include sp() {
+          font-size: vw(15);
+          text-align: justify;
+          padding: 0 vw(12);
+          margin-bottom: vw(32);
+          letter-spacing: 0.04em;
+        }
+      }
+
+      .lp-caption {
+        font-size: 14px;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        font-weight: 400;
+        text-align: center;
+        margin-top: 24px;
+
+        @include sp() {
+          font-size: vw(14);
+          margin-bottom: vw(24);
+          text-align: left;
+          text-indent: -15px;
+          padding-left: 15px;
+        }
+      }
+
+      .lp-table-link {
+        text-align: center;
+        margin-top: 40px;
+
+        @include sp() {
+          margin-top: vw(32);
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 78px;
+
+        @include sp() {
+          margin-bottom: vw(56);
+        }
+      }
+    }
+  }
+
+  &-step {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 64px;
+    letter-spacing: 0.04em;
+
+    @include sp() {
+      padding-top: vw(40);
+    }
+
+    &-left {
+      width: 600px;
+
+      @include sp() {
+        width: 100%;
+      }
+
+      .lp-step-content {
+        height: 100%;
+      }
+    }
+
+    &-middle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include sp() {
+        width: 100%;
+      }
+    }
+
+    &-right {
+      width: 488px;
+      padding: 21px 21px 21px;
+      border: 3px dashed $primary_color;
+      border-radius: 24px;
+
+      @include sp() {
+        width: 100%;
+        padding: vw(10);
+        border-radius: vw(24);
+      }
+    }
+
+    &-plus {
+      width: 24px;
+      margin: 16px auto;
+
+      @include sp() {
+        width: vw(24);
+        margin: vw(12) auto;
+      }
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-head {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      background-color: $main_color;
+      padding: 0 24px;
+      color: $white_color;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+
+      @include sp() {
+        height: vw(64);
+        padding: 0 vw(24);
+        border-top-left-radius: vw(16);
+        border-top-right-radius: vw(16);
+      }
+
+      img {
+        display: block;
+        width: 95px;
+        margin-right: 16px;
+
+        @include sp() {
+          width: vw(93);
+          margin-right: vw(16);
+        }
+      }
+
+      strong {
+        display: flex;
+        align-items: center;
+        line-height: 1;
+        font-size: 20px;
+        text-transform: uppercase;
+        font-family: 'Helvetica', sans-serif;
+
+        @include sp() {
+          font-size: vw(20);
+        }
+
+        span {
+          margin-left: 9px;
+          margin-right: 16px;
+          background-color: $white_color;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 20px;
+          color: $main_color;
+          border-radius: 100%;
+
+          @include sp() {
+            width: vw(32);
+            height: vw(32);
+            font-size: vw(20);
+            margin-left: vw(8);
+            margin-right: vw(16);
+          }
+        }
+      }
+
+      p {
+        font-size: 24px;
+        line-height: 1;
+        font-weight: bold;
+
+        @include sp() {
+          font-size: vw(20);
+        }
+      }
+    }
+
+    &-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+      background-color: $table_row_color;
+      padding: 32px 40px 40px 40px;
+      border-bottom-left-radius: 16px;
+      border-bottom-right-radius: 16px;
+
+      @include sp() {
+        padding: vw(24) vw(12);
+        border-bottom-left-radius: vw(16);
+        border-bottom-right-radius: vw(16);
+      }
+    }
+
+    &-txt {
+      text-align: center;
+      font-size: 18px;
+      line-height: 1.8;
+      font-weight: 400;
+
+      @include sp() {
+        font-size: vw(15);
+      }
+    }
+
+    .lp-table {
+      thead {
+        th {
+          &:last-child {
+            border-top-right-radius: 4px;
+          }
+
+          &:nth-last-child(2) {
+            border-top-left-radius: 4px;
+          }
+        }
+      }
+
+      tr {
+        min-height: 93px;
+
+        @include sp() {}
+
+        td {
+          text-align: center;
+
+          &:first-child {
+            padding: 0 12px;
+            line-height: 1.4;
+
+            @include sp() {
+              @include sp() {
+                padding: 0 vw(8);
+              }
+            }
+          }
+
+          &>span {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.8;
+
+            @include sp() {
+              font-size: vw(14);
+            }
+          }
+
+          &:last-child {
+            td {
+              &:first-child {
+                border-bottom-left-radius: 4px;
+              }
+
+              &:last-child {
+                border-bottom-right-radius: 4px;
+              }
+            }
+          }
+        }
+
+        &:first-child {
+          td {
+            color: $main_color;
+
+            &:first-child {
+              font-weight: bold;
+            }
+
+            p {
+              font-size: 28px;
+
+              @include sp() {
+                font-size: vw(24);
+              }
+            }
+
+            &>span {
+              color: $base_color;
+            }
+
+            .lp-yen {
+              font-size: 20px;
+
+              @include sp() {
+                font-size: vw(16);
+              }
+            }
+
+            .lp-month {
+              font-size: 14px;
+              font-weight: 400;
+
+              @include sp() {
+                font-size: vw(14);
+              }
+            }
+          }
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 1.5;
+          font-weight: bold;
+
+          @include sp() {
+            font-size: vw(20);
+          }
+        }
+
+        .lp-yen {
+          font-size: 20px;
+
+          @include sp() {
+            font-size: vw(16);
+          }
+        }
+
+        .lp-month {
+          font-size: 14px;
+          font-weight: 400;
+
+          @include sp() {
+            font-size: vw(14);
+          }
+        }
+      }
+
+      .lp-bt-left-radius {
+        border-top-left-radius: 4px !important;
+
+        @include sp() {
+          border-top-left-radius: vw(4) !important;
+        }
+      }
+    }
+
+    &-2 {
+      .lp-step-body {
+        @include sp() {
+          padding: vw(32);
+        }
+      }
+    }
+
+    &-3 {
+      .lp-step-body {
+        @include sp() {
+          padding: vw(24) vw(24) vw(32);
+        }
+      }
+    }
+  }
+
+  &-plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+    color: $base_color;
+    padding: 40px 0 39px;
+    border-radius: 16px;
+    border: 1px solid $border_color;
+    margin-bottom: 32px;
+
+    @include sp() {
+      padding: vw(32) vw(24);
+      margin-bottom: vw(24);
+    }
+
+    &-item {
+      display: flex;
+      width: 500px;
+      column-gap: 32px;
+
+      @include sp() {
+        width: 100%;
+        column-gap: vw(8);
+      }
+
+      &:first-child {
+        @include pc() {
+          justify-content: flex-end;
+          border-right: 1px solid #D6D8E0;
+          padding-right: 88.5px;
+
+          .lp-plan-btn {
+            .lp-c-btn-primary--little {
+              min-width: 227px;
+            }
+          }
+        }
+
+        @include sp() {
+          padding-bottom: vw(32);
+          margin-bottom: vw(32);
+          border-bottom: 1px solid #D6D8E0;
+          ;
+        }
+      }
+
+      &:last-child {
+        @include pc() {
+          justify-content: flex-start;
+          padding-left: 88.5px;
+        }
+      }
+    }
+
+    .lp-plan-des {
+      @include pc() {
+        margin-top: 10px;
+      }
+
+      @include sp() {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    figure {
+      width: 144px;
+
+      @include sp() {
+        width: vw(96);
+      }
+    }
+
+    &-des {
+      @include sp() {
+        margin-top: vw(6);
+      }
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 1.6;
+      font-weight: bold;
+
+      @include sp() {
+        font-size: vw(18);
+        text-align: center;
+        line-height: 1.4;
+        margin-top: vw(-5);
+      }
+
+      span {
+        font-size: 32px;
+        color: $main_color;
+        font-family: 'Helvetica', sans-serif;
+
+        @include sp() {
+          font-size: vw(28);
+        }
+      }
+
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+
+        @include sp() {
+          font-size: vw(15);
+        }
+      }
+    }
+
+    &-btn {
+      display: flex;
+      margin-top: 18px;
+
+      @include sp() {
+        margin-top: vw(17);
+      }
+    }
+
+    .lp-c-btn-primary--little {
+      min-width: 155px;
+      height: 37px;
+
+      @include sp() {
+        height: vw(34);
+        min-width: vw(142);
+      }
+    }
+  }
+
+  &-mailbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px 0;
+    letter-spacing: 0.04em;
+
+    @include sp() {
+      gap: vw(16) 0;
+    }
+
+    &-item {
+      width: 560px;
+      display: flex;
+      justify-content: space-between;
+      padding: 31px 40px 31px 24px;
+      border-radius: 8px;
+      border: 1px solid $border_color;
+
+      @include sp() {
+        width: 100%;
+        flex-wrap: wrap;
+        padding: vw(22) vw(24) vw(27) vw(24);
+      }
+    }
+
+    &-media {
+      width: 144px;
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      @include sp() {
+        width: vw(258);
+        column-gap: vw(8);
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto vw(16);
+
+        &>figure {
+          width: vw(104);
+          flex-shrink: 0;
+        }
+
+        &-06 {
+          width: vw(285.68);
+        }
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+
+    &-logo {
+      width: 115px;
+      margin: 0 auto;
+
+      @include sp() {
+        width: vw(146);
+      }
+
+      &-02 {
+        width: 118px;
+
+        @include sp() {
+          width: vw(151);
+        }
+      }
+
+      &-03 {
+        width: 135.5px;
+
+        figure {
+          &:first-child {
+            width: 115px;
+            margin: 0 auto;
+          }
+        }
+      }
+
+      &-06 {
+        width: 135.5px;
+
+        @include sp() {
+          width: vw(173);
+        }
+      }
+    }
+
+    &-detail {
+      width: 312px;
+      color: $base_color;
+
+      @include sp() {
+        width: 100%;
+      }
+
+      .lp-mailbox-inner {
+        &:not(:first-child) {
+          margin-top: 12px;
+
+          @include sp() {
+            margin-top: vw(11);
+          }
+        }
+      }
+
+      &-list {
+        margin-top: 10px;
+
+        @include sp() {
+          margin-top: vw(8);
+        }
+      }
+
+      &-item {
+        font-size: 14px;
+        line-height: 1.8;
+        font-weight: 400;
+        padding-left: 22px;
+        position: relative;
+        text-align: justify;
+
+        &::after {
+          content: "•";
+          position: absolute;
+          top: 0;
+          left: 9px
+        }
+
+        @include sp() {
+          font-size: vw(14);
+        }
+      }
+
+      &-btn {
+        margin-top: 16px;
+
+        @include sp() {
+          margin-top: vw(16);
+          text-align: center;
+        }
+      }
+    }
+
+    &-label {
+      background-color: $table_row_color;
+      padding: 16px 24px;
+      text-align: center;
+      margin-bottom: 16px;
+      color: $main_color;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: bold;
+
+      @include sp() {
+        padding: vw(12) vw(16);
+        margin-bottom: 0;
+        font-size: vw(18);
+      }
+    }
+
+    &-strong {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: bold;
+
+      @include sp() {
+        font-size: vw(15);
+      }
+    }
+
+    &-txt {
+      font-size: 16px;
+      line-height: 1.8;
+      font-weight: 400;
+      text-align: justify;
+      letter-spacing: 0.04em;
+
+      @include sp() {
+        font-size: vw(15);
+        text-align: left;
+        letter-spacing: 0.03em;
+      }
+    }
+
+    &-note {
+      font-size: 10px;
+      line-height: 1.8;
+      color: $base_color;
+      margin-top: -3px;
+      letter-spacing: 0.04em;
+    }
+  }
+}

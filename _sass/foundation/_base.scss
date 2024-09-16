@@ -1,0 +1,143 @@
+// -----------------------------------------------------------------
+// Base
+// -----------------------------------------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: unset !important;
+}
+
+body {
+  font-family: $noto_sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #00348A;
+  -webkit-text-size-adjust: 100%;
+  min-width: 1300px;
+  position: relative;
+  overflow-x: unset;
+  @include sp() {
+    min-width: auto;
+    font-size: vw(14);
+  }
+}
+
+
+a {
+  transition: all 0.3s;
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// telリンク
+a[href^="tel:"] {
+  // cursor: default;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+
+  @include sp() {
+    width: 100%;
+  }
+}
+
+picture {
+  display: block;
+}
+
+button {
+  transition: all .3s ease-out;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none transparent;
+  color: inherit;
+  font-size: inherit;
+  line-height: 1;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border-radius: 0;
+}
+
+textarea {
+  outline: none;
+  resize: vertical;
+  -webkit-appearance: none;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #63697F;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #63697F;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #63697F;
+}
+
+#lp-wrapper {
+  overflow: hidden;
+  position: relative;
+  font-feature-settings: 'palt' on; 
+}
+
+.lp-inner {
+  display: block;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+
+  @include sp() {
+    width: vw(366);
+    max-width: 100%;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700 !important;
+}
+
+.txt-black {
+  font-weight: 900;
+}
+
+.txt-marker {
+  background: linear-gradient(transparent 70%, #FFD560 30%);
+}
+
+@include pc() {
+	.is-sp {
+		display: none !important;
+	}
+}
+
+@include sp() {
+	.is-pc {
+		display: none !important;
+	}
+}

@@ -1,0 +1,326 @@
+// -----------------------------------------------------------------
+// Usage fee
+// -----------------------------------------------------------------
+.lp {
+  &-usagefee {
+    background-color: $table_row_color;
+    padding: 120px 0;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.04em;
+    color: $base_color;
+    margin-bottom: 120px;
+
+    @include sp() {
+      padding: vw(80) 0;
+      margin-bottom: vw(80);
+      font-size: vw(15);
+    }
+
+    .lp-head-title {
+      @include pc() {
+        margin-bottom: 56px;
+      }
+    }
+
+    &-case {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      &-item {
+        display: flex;
+        flex-direction: column;
+        width: 560px;
+        background-color: $white_color;
+        border-radius: 16px;
+
+        @include sp() {
+          width: 100%;
+
+          &:not(:last-child) {
+            margin-bottom: vw(40);
+          }
+        }
+      }
+
+      &-label {
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        background-color: $main_color;
+        padding: 0 10px 32px;
+        color: $white_color;
+        text-align: center;
+        font-weight: bold;
+        line-height: 1;
+
+        p {
+          font-size: 24px;
+          line-height: 1;
+
+          span {
+            font-size: 18px;
+          }
+        }
+
+        @include sp() {
+          padding: 0 vw(10) vw(28);
+
+          p {
+            font-size: vw(20);
+
+            span {
+              font-size: vw(15);
+            }
+          }
+        }
+      }
+
+      &-title {
+        width: 143px;
+        height: 64px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        background-color: $table_thead_color;
+        font-size: 20px;
+        font-family: "Helvetica", sans-serif;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        text-transform: uppercase;
+        padding-bottom: 16px;
+        margin: 0 auto 24px;
+
+        @include sp() {
+          width: vw(134);
+          height: vw(52);
+          font-size: vw(18);
+          border-bottom-left-radius: vw(8);
+          border-bottom-right-radius: vw(8);
+          margin-bottom: vw(24);
+          padding-bottom: vw(12);
+        }
+
+        span {
+          font-size: 32px;
+          margin-left: 5px;
+          position: relative;
+          top: 2px;
+          font-family: 'Helvetica', sans-serif;
+
+          @include sp() {
+            font-size: vw(28);
+            margin-left: vw(3);
+            top: vw(1);
+          }
+        }
+      }
+
+      &-main {
+        height: 100%;
+        padding: 32px 40px 48px;
+        border: 1px solid $border_color;
+        border-bottom-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+
+        @include sp() {
+          padding: vw(32) vw(32) vw(48);
+          border-bottom-left-radius: vw(16);
+          border-bottom-right-radius: vw(16);
+        }
+      }
+
+      &-price {
+        padding-bottom: 31px;
+        margin-bottom: 31px;
+        border-bottom: 1px solid $border_color;
+        font-size: 16px;
+        line-height: 1.6;
+
+        @include sp() {
+          padding-bottom: vw(32);
+          margin-bottom: vw(32);
+          font-size: vw(15);
+        }
+      }
+
+      &-per {
+        width: 118px;
+        margin: 0 auto 12px;
+        padding: 8px 0;
+        font-weight: bold;
+        text-align: center;
+        background-color: #FFEFC2;
+        font-size: 16px;
+        line-height: 1.4;
+
+        @include sp() {
+          width: vw(118);
+          margin-bottom: vw(16);
+          font-size: vw(16);
+          padding: vw(8) 0;
+        }
+      }
+
+      &-amount {
+        line-height: 1;
+        margin-bottom: 24px;
+        text-align: center;
+
+        @include sp() {
+          margin-bottom: vw(16);
+        }
+
+        p {
+          font-weight: bold;
+          font-size: 64px;
+          color: $main_color;
+          margin-bottom: 18px;
+          font-family: 'Helvetica', sans-serif;
+
+          @include sp() {
+            margin-bottom: vw(15);
+            font-size: vw(64);
+          }
+        }
+
+        span {
+          font-size: 32px;
+
+          @include sp() {
+            font-size: vw(32);
+          }
+        }
+
+        small {
+          font-size: 15px;
+          font-weight: 400;
+
+          @include sp() {
+            font-size: vw(15);
+          }
+        }
+      }
+
+      &-annually {
+        min-width: 290px;
+        margin: 0 auto;
+        width: max-content;
+
+        @include sp() {
+          width: 100%;
+        }
+
+        p {
+          &:not(:last-child) {
+            margin-bottom: 8px;
+
+            @include sp() {
+              margin-bottom: vw(8);
+            }
+          }
+        }
+      }
+
+      dl {
+        display: flex;
+        column-gap: 16px;
+
+        @include sp() {
+          flex-wrap: wrap;
+        }
+
+        &:not(:last-child) {
+          margin-bottom: 16px;
+
+          @include sp() {
+            margin-bottom: vw(24);
+          }
+        }
+
+        dt {
+          width: 160px;
+          color: $main_color;
+          font-weight: bold;
+          text-align: center;
+          line-height: 1;
+
+          @include sp() {
+            width: 100%;
+          }
+
+          p {
+            border-radius: 4px;
+            background-color: $table_row_color;
+            padding: 12px 0;
+
+            @include sp() {
+              width: vw(160);
+              padding: vw(12) 0;
+              margin: 0 auto;
+            }
+          }
+        }
+
+        dd {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          font-size: 16px;
+          line-height: 1.8;
+          font-weight: 400;
+
+          @include sp() {
+            width: 100%;
+            font-size: vw(15);
+            margin-top: vw(12);
+          }
+
+          strong {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 3px;
+
+            @include sp() {
+              margin-top: 0;
+              font-size: vw(18);
+              text-align: center;
+            }
+          }
+
+          p {
+            margin-top: 10px;
+
+            @include sp() {
+              margin-top: vw(8);
+            }
+          }
+        }
+      }
+
+      &-note {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        column-gap: 16px;
+        font-size: 14px;
+        line-height: 1.6;
+        font-weight: 400;
+        margin-top: 24px;
+
+        @include sp() {
+          row-gap: vw(8);
+          font-size: vw(14);
+          margin-top: vw(24);
+
+          li {
+            width: 100%;
+            text-indent: vw(-15);
+            padding-left: vw(15);
+          }
+        }
+      }
+    }
+  }
+}
